@@ -57,6 +57,7 @@ Populates the footer with string values and links. Supports only one Entry.
 ***
 ### list
 Use when the web site needs to display a list of choices to the end user. Entries provide a list of values for the data entry objects select-list, select-list-multi, and radio. Each Entry is populated with two or more Groups with each Group representing a list item. Note that importing a large list of values is easy as the json can be generated programmatically. [An example payload here](http://minshew.com/misc/files/list-practice-area.json)
+
 | Field | Type | Notes |
 | --- | --- | --- |
 | title | single-line text |  |
