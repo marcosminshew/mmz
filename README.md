@@ -72,6 +72,7 @@ Constitutes meta-data for data entry forms. Changes to the Content Type's struct
 
 The design uses a pattern of sectioning long data entry forms into smaller chunks. As such to use a __form__ on a page first create a group for the entire data entry portion of the page, then create a nested group that will contain the section(s). Place the Reference object to __form__ inside the nested group. If the design calls for multiple sections set the nested group to allow multiple. The screen cap below if from the Content Type named page-job-app and is an example of a multi-section entry form.
 ![form UI][form-ui]
+
 Entries in __form__ can be thought of as a collection of one or more fields that comprise data entry modules. Each field in the form is described in a form_fields group. The order of the form_fields groups is the order the entry fields will appear.
 
 The field types select-list, select-list-multi, and radio all require a list of options be provided. These options come from one of two places: The values in a __list__ Entry or the Entries in a Content Type. Use form_fields.list_or_options or form_fields.content_type, respectively. The list_or_options is a Reference object that allows selection of a __list__ Entry. content_type is a text field that takes the UID of a Content Type, e.g., __industry__ or __service__. Specify one or the other but not both.
@@ -160,12 +161,14 @@ This Content Type supports elements of the design where a row of text is shown f
 | Field | Type | Notes |
 | --- | --- | --- |
 | title | single-line text | should describe the Entry's location and use |
-| text_only-divider | group |  |
+| text_only_divider | group |  |
 | content | rich-text | enter value to show as text-only, end group |
 | heading_divider | group |  |
 | heading | single-line text |  |
 | sub_heading | single-line text | end group |
 | cta | link | optional link |
+
+![text divider][text-divider]
 
 ***
 ### service-toolkit
@@ -194,3 +197,4 @@ The content structure of these Content Types is subject to change as modificatio
 [form-fields]: http://minshew.com/misc/files/form-fields.png "form fields map"
 [main-nav]: http://minshew.com/misc/files/main-nav.png "main navigation map"
 [service-toolkit]: http://minshew.com/misc/files/service-toolkit.png "service toolkit"
+[text-divider]: files/text-divider.png "text divider"
