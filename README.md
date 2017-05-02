@@ -30,7 +30,7 @@ These Content Types support page elements such as the footer and main navigation
 ### footer
 Populates the footer with string values and links. Supports only one Entry.
 | Field | Type | Notes |
-
+| --- | --- | --- |
 | title | single-line text | used as H2 element |
 | title_caption | multi-line text | paragraph shown proximal to title |
 | contact_us_button_label | single-line text | label shown on Contact Us button |
