@@ -11,6 +11,7 @@ In order to start the process a username, password, Client Id, & Client Secret a
 The *authorization_code* can be returned manually by executing:
 
 `curl -v "https://auth.bullhornstaffing.com/oauth/authorize?action=Login&response_type=code&username={username}&password={password]&client_id={Client Id}"`
+
 The payload returned will contain a **Location** value which is a URL that contains a **code** parameter. This parameter's value is the *authorization_code*. See ./src/api/ats-router.js for the application's method of obtaining an *authorization_code*.
 
 Next execute the following to receive an *access_token* and a *refresh_token*:
@@ -47,6 +48,7 @@ A **query** request uses a SQL **where** clause. An example could be:
 A **search** request uses a Lucene search in a **query** parameter:
 
 `{restUrl}search/Candidate?query=isDeleted:false&fields=id,firstName,lastName,category,categories&count=200&sort=id`
+
 For more on Lucene searches [go here](https://lucene.apache.org/core/3_6_2/queryparsersyntax.html).
 
 ### search vs. query
@@ -83,6 +85,7 @@ The list of available positions is returned from JobOrder. In order for a partic
 isDeleted must be checked because Bullhorn does not allow JobOrder records to be "hard" deleted but rather sets isDeleted to true (a so-called "soft" delete). Since the UI displays the total number of records found use the **search** endpoint:
 
 `GET {restUrl}search/JobOrder?query=isOpen:true AND isPublic:1 AND isDeleted:false&fields=id,title&count=200&sort=-id`
+
 Note: `sort=-id` puts the list in reverse-creation order.
 
 The `/join-us/available-positions` UI requires the JobOrder's "title" and "address(city,state)". The job detail UI also displays the "description". Filters are available for "categories", "onSite", and "customText12" which is used for 'Job Level'. Going forward new JobOrder records should be certain to provide values for all of these fields.
