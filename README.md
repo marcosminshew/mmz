@@ -30,6 +30,11 @@ These Content Types support page elements such as the footer and main navigation
 ### footer
 Populates the footer with string values and links. Supports only one Entry.
 
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+
 | Field | Type | Notes |
 |---+---+---|
 | title | single-line text | used as H2 element |
