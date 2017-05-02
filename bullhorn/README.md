@@ -9,19 +9,24 @@ Establishing an authorized session with the RESTful service is a multi-step proc
 
 In order to start the process a username, password, Client Id, & Client Secret are required. Look to ./src/api/ats-router-constants.js for the values used by the app.
 The *authorization_code* can be returned manually by executing:
+
 `curl -v "https://auth.bullhornstaffing.com/oauth/authorize?action=Login&response_type=code&username={username}&password={password]&client_id={Client Id}"`
 The payload returned will contain a **Location** value which is a URL that contains a **code** parameter. This parameter's value is the *authorization_code*. See ./src/api/ats-router.js for the application's method of obtaining an *authorization_code*.
 
 Next execute the following to receive an *access_token* and a *refresh_token*:
+
 `POST https://auth.bullhornstaffing.com/oauth/token?grant_type=authorization_code&code={authorization_code}&client_id={Client Id}&client_secret={Client Secret}`
 
 Now use the *access_token* to obtain a *BhRestToken*:
+
 `POST https://rest.bullhornstaffing.com/rest-services/login?version=*&access_token={access_token}&ttl=20`
 
 On subsequent requests to rest-services you'll need to send the value returned as an HTTP header labeled *BhRestToken*. In the same payload a *restUrl* value is returned. This URL includes the *corporate_code* and is used as the prefix to all subsequent requests:
+
 `restUrl = https://rest9.bullhornstaffing.com/rest-services/{corporate_code}/`
 
 Your *access_token* will expire once the time-to-live (ttl) has passed and the server will return a 401 error. Use the *refresh_token* to obtain new tokens:
+
 `POST https://auth.bullhornstaffing.com/oauth/token?grant_type=refresh_token&refresh_token={refresh_token}&client_id={Client Id}&client_secret={Client Secret}}`
 
 Once you have the new *access_token* make a subsequent /login request to obtain a new *BhRestToken*.
@@ -36,9 +41,11 @@ A **GET** request is comprised of several parts:
 and then optionally you can specify the sort order, the start, and count values (for pagination).
 
 A **query** request uses a SQL **where** clause. An example could be:
+
 `{restUrl}query/JobOrder?where=isOpen=true and isPublic=1&fields=id,title,address,categories&count=200&orderBy=id`
 
 A **search** request uses a Lucene search in a **query** parameter:
+
 `{restUrl}search/Candidate?query=isDeleted:false&fields=id,firstName,lastName,category,categories&count=200&sort=id`
 For more on Lucene searches [go here](https://lucene.apache.org/core/3_6_2/queryparsersyntax.html).
 
@@ -59,9 +66,11 @@ To sort the result set of a **query** request add an **orderBy** parameter to th
 - For **POST** the record's "id" value.
 
 An example **PUT** to _create_ a record:
+
 `PUT {restUrl}entity/Candidate`
 
 An example **POST** to _update_ a record (also used for **DELETE**):
+
 `PUT {restUrl}entity/Candidate/39922`
 
 ## Endpoints Used
@@ -72,6 +81,7 @@ The list of available positions is returned from JobOrder. In order for a partic
 - isDeleted=false
 
 isDeleted must be checked because Bullhorn does not allow JobOrder records to be "hard" deleted but rather sets isDeleted to true (a so-called "soft" delete). Since the UI displays the total number of records found use the **search** endpoint:
+
 `GET {restUrl}search/JobOrder?query=isOpen:true AND isPublic:1 AND isDeleted:false&fields=id,title&count=200&sort=-id`
 Note: `sort=-id` puts the list in reverse-creation order.
 
@@ -79,8 +89,9 @@ The `/join-us/available-positions` UI requires the JobOrder's "title" and "addre
 
 ### Candidate
 A Candidate record is created for each application submitted. The same user submitting two applications will create duplicate Candidate records. Some custom fields are used to store the data.
+
 |Custom field|Value Stored|
-|---|---|
+| --- | --- |
 |customInt1|Qualifaction Year (PQE)|
 |customText2|Other Bar Admissions|
 |customText7|VISA sponsorship required?|
@@ -108,8 +119,9 @@ The payload returned upon successful completion of the PUT will contain an "id" 
 
 ### CandidateEducation
 One or more CandidateEducation records can be submitted by the application UI. Only one custom field is used.
+
 |Custom field|Value Stored|
-|---|---|
+| --- | --- |
 |customInt1|Year of Graduation|
 
 You must supply the Candidate "id" value returned from the previous step. A sample payload for creating a CandidateEducation:
