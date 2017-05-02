@@ -56,7 +56,7 @@ Populates the footer with string values and links. Supports only one Entry.
 
 ***
 ### list
-Use when the web site needs to display a list of choices to the end user. Entries provide a list of values for the data entry objects select-list, select-list-multi, and radio. Each Entry is populated with two or more Groups with each Group representing a list item. Note that importing a large list of values is easy as the json can be generated programmatically. [An example payload here](http://minshew.com/misc/files/list-practice-area.json)
+Use when the web site needs to display a list of choices to the end user. Entries provide a list of values for the data entry objects select-list, select-list-multi, and radio. Each Entry is populated with two or more Groups with each Group representing a list item. Note that importing a large list of values is easy as the json can be generated programmatically. [An example payload here](files/list-practice-area.json)
 
 | Field | Type | Notes |
 | --- | --- | --- |
@@ -157,7 +157,7 @@ News Articles are shown as summaries on __page-home__ and a detail page is plann
 
 ***
 ### text-divider
-This Content Type supports elements of the design where a row of text is shown full width. A CTA can optionally be shown. There are two types of text-dividers: text-only and heading divider. Only one should be entered but text-only will take priority if not. A heading divider allows a heading and sub-heading. See /join-us for examples of both on one page.
+This Content Type supports elements of the design where a row of text is shown full width. A CTA can optionally be shown. There are two types of text-dividers: text-only and heading divider. Only one should be entered but text-only will take priority if not. A heading divider allows a heading and sub-heading.
 
 | Field | Type | Notes |
 | --- | --- | --- |
@@ -193,9 +193,9 @@ The design calls for horizontal bands of text and images. Page Content Types may
 
 The content structure of these Content Types is subject to change as modifications are made to the page design. As such, the structure is not documented here. If you are having difficulty identifying the Content Type element that is responsible for the content on the page, edit the page's record and replace all the values with the field's name. Publish to a local environment and reload the page.
 
-[footer]: http://minshew.com/misc/files/final_footer-map.png "final footer map"
-[form-ui]: http://minshew.com/misc/files/form-ui.png "form UI"
-[form-fields]: http://minshew.com/misc/files/form-fields.png "form fields map"
-[main-nav]: http://minshew.com/misc/files/main-nav.png "main navigation map"
-[service-toolkit]: http://minshew.com/misc/files/service-toolkit.png "service toolkit"
+[footer]: files/final_footer-map.png "final footer map"
+[form-ui]: files/form-ui.png "form UI"
+[form-fields]: files/form-fields.png "form fields map"
+[main-nav]: files/main-nav.png "main navigation map"
+[service-toolkit]: files/service-toolkit.png "service toolkit"
 [text-divider]: files/text-divider.png "text divider"
