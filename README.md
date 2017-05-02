@@ -71,6 +71,7 @@ Use when the web site needs to display a list of choices to the end user. Entrie
 Constitutes meta-data for data entry forms. Changes to the Content Type's structure require code updates.
 
 The design uses a pattern of sectioning long data entry forms into smaller chunks. As such to use a __form__ on a page first create a group for the entire data entry portion of the page, then create a nested group that will contain the section(s). Place the Reference object to __form__ inside the nested group. If the design calls for multiple sections set the nested group to allow multiple. The screen cap below if from the Content Type named page-job-app and is an example of a multi-section entry form.
+
 ![form UI][form-ui]
 
 Entries in __form__ can be thought of as a collection of one or more fields that comprise data entry modules. Each field in the form is described in a form_fields group. The order of the form_fields groups is the order the entry fields will appear.
