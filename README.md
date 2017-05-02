@@ -30,11 +30,6 @@ These Content Types support page elements such as the footer and main navigation
 ### footer
 Populates the footer with string values and links. Supports only one Entry.
 
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
-
 | Field | Type | Notes |
 | --- | --- | --- |
 | title | single-line text | used as H2 element |
@@ -63,7 +58,7 @@ Populates the footer with string values and links. Supports only one Entry.
 ### list
 Use when the web site needs to display a list of choices to the end user. Entries provide a list of values for the data entry objects select-list, select-list-multi, and radio. Each Entry is populated with two or more Groups with each Group representing a list item. Note that importing a large list of values is easy as the json can be generated programmatically. [An example payload here](http://minshew.com/misc/files/list-practice-area.json)
 | Field | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | title | single-line text |  |
 | list_description | multi-line text | description of how/where the list is used, not displayed |
 | list_item | group | create a new group for each list item |
@@ -80,7 +75,7 @@ Entries in __form__ can be thought of as a collection of one or more fields that
 
 The field types select-list, select-list-multi, and radio all require a list of options be provided. These options come from one of two places: The values in a __list__ Entry or the Entries in a Content Type. Use form_fields.list_or_options or form_fields.content_type, respectively. The list_or_options is a Reference object that allows selection of a __list__ Entry. content_type is a text field that takes the UID of a Content Type, e.g., __industry__ or __service__. Specify one or the other but not both.
 | Field | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | title | single-line text | unused (except when establishing the reference) |
 | form_description | multi-line text | optional description of form's use/purpose, not displayed |
 | form_fields | group | create a group for each field in the form |
@@ -99,7 +94,7 @@ The field types select-list, select-list-multi, and radio all require a list of 
 ### main-navigation
 Drives the structure and content of the primary navigation elements which consists of a number of 'Main Nav' links (that connect to L2 Landing pages) each with zero or more 'Sub Nav' links (that lead to L3 pages). A single Entry is used. Adding Main Nav and/or Sub Nav elements will require routing updates.
 | Field | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | title | single-line text | unused |
 | main_nav | group | create one for each main navigation element, contains a sub-group |
 | main_nav.link | link | the name and target of the main navigation element |
@@ -116,7 +111,7 @@ These Content Types provide content to the site and can be displayed as page ele
 ### case-study
 Case Studies have their own landing and detail pages and are referenced by __page-home__.  At least two Entries are needed are needed for the reference. __case-study__ references __industry__ and __service__ to allow contextual filtering. The current model accepts an image. In future video may be supported.
 | Field | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | title | single-line text | case study title |
 | image | file, image only |  |
 | client | single-line text |  |
@@ -133,7 +128,7 @@ The image supports an optional Title and Copy that is displayed on top of the im
 
 \* These features are supported in the Content Type but as of this writing they are not supported in the code.
 | Field | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | image | file, image only |  |
 | title | Single-line text | text that appears over the image as a title |
 | copy | Single-line text | additional text that appears over the image |
@@ -143,7 +138,7 @@ The image supports an optional Title and Copy that is displayed on top of the im
 ### news-article
 News Articles are shown as summaries on __page-home__ and a detail page is planned but not built as of the time of this writing. 3 or more are necessary to make the Home Page look balanced. More is better. Each article supports an image and a thumbnail of that image.
 | Field | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | title | single-line text | displayed as the article's title |
 | category | reference | News Category |
 | images | group |  |
@@ -156,7 +151,7 @@ News Articles are shown as summaries on __page-home__ and a detail page is plann
 ### text-divider
 This Content Type supports elements of the design where a row of text is shown full width. A CTA can optionally be shown. There are two types of text-dividers: text-only and heading divider. Only one should be entered but text-only will take priority if not. A heading divider allows a heading and sub-heading. See /join-us for examples of both on one page.
 | Field | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | title | single-line text | should describe the Entry's location and use |
 | text_only-divider | group |  |
 | content | rich-text | enter value to show as text-only, end group |
@@ -169,7 +164,7 @@ This Content Type supports elements of the design where a row of text is shown f
 ### service-toolkit
 Service Toolkits are shown on the Case Study Landing page. Each Entry presents a downloadable file to the user.
 | Field | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | title | single-line text | service toolkit title |
 | image | file, image only |  |
 | service | reference | reference to __service__ |
