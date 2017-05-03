@@ -25,7 +25,7 @@ About the only thing you can do in batch mode is Publishing and you do that from
 
 Most parameters have defaults but if you don't specifiy them you get prompted. An example that publishes to two Environements and updates two Content Types:
 
-`contentstack publish -u user@domain.com -p MyPassw0rd -e development-local,staging -t content_types -l en-us -b no -c list,form,service_toolkit -s
+`contentstack publish -u user@domain.com -p MyPassw0rd -e development-local,staging -t content_types -l en-us -b no -c list,form,service_toolkit -s`
 
 This will publish ALL Content Types and Assets to the Environment named Production:
 
