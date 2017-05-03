@@ -56,7 +56,7 @@ Populates the footer with string values and links. Supports only one Entry.
 
 ***
 ### list
-Use when the web site needs to display a list of choices to the end user. Entries provide a list of values for the data entry objects select-list, select-list-multi, and radio. Each Entry is populated with two or more Groups with each Group representing a list item. Note that importing a large list of values is easy as the json can be generated programmatically. [An example payload here](files/list-practice-area.json)
+Use when the web site needs to display a list of choices to the end user. Entries provide a list of values for the data entry objects select-list, select-list-multi, and radio. Each Entry is populated with two or more Groups with each Group representing a list item. Note that importing a large list of values is easy as the json can be generated programmatically. [An example payload here](files/primary-legal-specialty.json)
 
 | Field | Type | Notes |
 | --- | --- | --- |
@@ -179,7 +179,7 @@ Service Toolkits are shown on the Case Study Landing page. Each Entry presents a
 | --- | --- | --- |
 | title | single-line text | service toolkit title |
 | image | file, image only |  |
-| service | reference | reference to __service__ |
+| services | reference | reference to __service__ |
 | description | multi-line text |  |
 | download_file | file |  |
 

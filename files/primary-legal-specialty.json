@@ -1,0 +1,86 @@
+{
+    "title":"primary-legal-specialty",
+    "list_item":[
+        {
+          "data_value": 916924,
+          "display_value": "Advertising and Marketing"
+        },
+        {
+          "data_value": 916925,
+          "display_value": "Asset Management"
+        },
+        {
+          "data_value": 916926,
+          "display_value": "Banking and Finance"
+        },
+        {
+          "data_value": 916927,
+          "display_value": "Capital Markets"
+        },
+        {
+          "data_value": 916928,
+          "display_value": "Commercial"
+        },
+        {
+          "data_value": 916929,
+          "display_value": "Compliance and Regulatory"
+        },
+        {
+          "data_value": 916934,
+          "display_value": "Energy"
+        },
+        {
+          "data_value": 916936,
+          "display_value": "Government Contracts"
+        },
+        {
+          "data_value": 916937,
+          "display_value": "Healthcare and Life Sciences"
+        },
+        {
+          "data_value": 916939,
+          "display_value": "Intellectual Property"
+        },
+        {
+          "data_value": 916940,
+          "display_value": "Labor - Employment and Benefits"
+        },
+        {
+          "data_value": 916943,
+          "display_value": "Litigation"
+        },
+        {
+          "data_value": 916944,
+          "display_value": "Mergers and Acquisitions"
+        },
+        {
+          "data_value": 916946,
+          "display_value": "None - Recent Graduate"
+        },
+        {
+          "data_value": 916948,
+          "display_value": "Other Area(s)"
+        },
+        {
+          "data_value": 916950,
+          "display_value": "Privacy"
+        },
+        {
+          "data_value": 916951,
+          "display_value": "Real Estate"
+        },
+        {
+          "data_value": 1070241,
+          "display_value": "Tax"
+        },
+        {
+          "data_value": 916953,
+          "display_value": "Technology"
+        }
+      ],
+    "tags":[
+
+    ],
+    "locale":"en-us",
+    "list_description":"used in form: job-app.work-legal\nValues MUST match values in Bullhorn"
+}

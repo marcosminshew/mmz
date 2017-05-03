@@ -73,7 +73,7 @@ An example **PUT** to _create_ a record:
 
 An example **POST** to _update_ a record (also used for **DELETE**):
 
-`PUT {restUrl}entity/Candidate/39922`
+`POST {restUrl}entity/Candidate/39922`
 
 ## Endpoints Used
 ### JobOrder
