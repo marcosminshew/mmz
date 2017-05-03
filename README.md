@@ -12,6 +12,26 @@ Some markdown conventions are used for formatting string values:
   Emphasized text is presented in Axiom orange. To execute emphasized text use surrounding underscores \_like this\_.
 
 ***
+## Batch Publishing
+About the only thing you can do in batch mode is Publishing and you do that from the command line. You have to execute the command from the same directory where the Express app is installed and in this project that is the __cms__ folder. The command to issue is `contentstack publish` and there are number of parameters:
+* -u : username (email address)
+* -p : password
+* -e : comma-delimited string of Environements to publish to
+* -t : the type to publish: content_types, assets, or all
+* -l : the language to publish, e.g., en-us
+* -b : whether to make a backup or not: yes or no
+* -c : comma-delimited string of Content Types to publish, leave blank for All
+* -s : comma-delimited string of Content Types to skip, leave blank for NONE
+
+Most parameters have defaults but if you don't specifiy them you get prompted. An example that publishes to two Environements and updates two Content Types:
+
+`contentstack publish -u user@domain.com -p MyPassw0rd -e development-local,staging -t content_types -l en-us -b no -c list,form,service_toolkit -s
+
+This will publish ALL Content Types and Assets to the Environment named Production:
+
+`contentstack publish -u user@domain.com -p MyPassw0rd -e production -t all -l en-us -b no -c -s`
+
+***
 ## List Content Types
 Some Content Types are referenced by others and thus comprise a list of options to content editors in the Contentstack UI. For example, Case Studies (__case-study__) are associated with a Service Line (__service__). In order for a content editor to make the association the UI needs to display the list of __service__ Entries. This is accomplished via the Reference object. These List Content Types usually have nothing but a Title field. Any Content Type can be referenced, however, and thus be a list. For example the Home Page displays two featured Case Studies. To make the assocation the content editor selects two __case-study__ Entries in the page-home Entry. __case-study__ is not considered here, however, whereas those Entries are much more than just a list. Content Types that are used as lists are:
 ### service
