@@ -80,8 +80,10 @@ Note: As of this writing **POST** and **DELETE** are not used by the app.
 ## File Uploads and Resume Parsing
 ### File Uploads
 The application allows users to upload files which get attached to a Candidate record. In order to do this a **PUT** request is issued:
+
 `PUT {restUrl}file/Candidate/{candidate id}/raw`
 
+A json payload is passed in the body of the request.
 
 ## Endpoints Used
 ### JobOrder
