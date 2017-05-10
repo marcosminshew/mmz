@@ -73,7 +73,15 @@ An example **PUT** to _create_ a record:
 
 An example **POST** to _update_ a record (also used for **DELETE**):
 
-`POST {restUrl}entity/Candidate/39922`
+`POST {restUrl}entity/JobOrder/39922`
+
+Note: As of this writing **POST** and **DELETE** are not used by the app.
+
+## File Uploads and Resume Parsing
+### File Uploads
+The application allows users to upload files which get attached to a Candidate record. In order to do this a **PUT** request is issued:
+`PUT {restUrl}file/Candidate/{candidate id}/raw`
+
 
 ## Endpoints Used
 ### JobOrder
