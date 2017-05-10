@@ -85,7 +85,11 @@ The application allows users to upload files which get attached to a Candidate r
 
 A json payload is passed in the body of the request.
 
-
+    {
+        "fileType": "SAMPLE",
+        "externalID": "my-file-name.pdf",
+        "fileContent"
+    }
 
 ## Endpoints Used
 ### JobOrder
