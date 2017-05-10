@@ -85,6 +85,15 @@ The application allows users to upload files which get attached to a Candidate r
 
 A json payload is passed in the body of the request.
 
+|property|value|
+| --- | --- |
+|fileType|always send 'SAMPLE'|
+|externalID|hyphenated version of the file name|
+|fileContent|data stream of the file|
+|contentType|mime type, multipart/form|
+|description|original file name|
+|type|field name|
+
     {
         "fileType": "SAMPLE",
         "externalID": "my-file-name.pdf",
@@ -110,7 +119,7 @@ The `/join-us/available-positions` UI requires the JobOrder's "title" and "addre
 A Candidate record is created for each application submitted. The same user submitting two applications will create duplicate Candidate records. Some custom fields are used to store the data.
 
 |Custom field|Value Stored|
-| --- | --- |
+|---|---|
 |customInt1|Qualifaction Year (PQE)|
 |customText2|Other Bar Admissions|
 |customText7|VISA sponsorship required?|
@@ -140,7 +149,7 @@ The payload returned upon successful completion of the PUT will contain an "id" 
 One or more CandidateEducation records can be submitted by the application UI. Only one custom field is used.
 
 |Custom field|Value Stored|
-| --- | --- |
+|---|---|
 |customInt1|Year of Graduation|
 
 You must supply the Candidate "id" value returned from the previous step. A sample payload for creating a CandidateEducation:
