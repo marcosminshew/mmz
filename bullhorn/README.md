@@ -128,17 +128,19 @@ A Candidate record is created for each application submitted. The same user subm
 |customText7|VISA sponsorship required?|
 |customTextBlock5|LinkedIn URL|
 
-Most of the values are entered by the user but the following are calculated or defaulted:
+The fields updated by the application are:
 
-|key|value|
-|---|---|
-|name|concatenation firstName + " " lastName|
-|costumText2|comma separated string of selected values|
-|source|"Direct - Axiom website"|
-|address1|"--"|
-|city|"--"|
-|state|"--"|
-|zip|"--"|
+|key|data from|value stored|
+|---|---|---|
+|firstName|--|user entry|
+|lastName|--|user entry|
+|name|--|concatenation of (firstName + " " + lastName)|
+|email|--|user entry|
+|phone|--|user entry|
+|customTextBlock5|--|user entry|
+|category|list.primary-legal-specialty in Contentstack|user selection|
+|costumText2|list.bar-admissions in Contentstack|comma separated string of selected values|
+|source|--|always "Direct - Axiom website"|
 
 A sample payload for the body of a **PUT** request to create a Candidate:
 
@@ -153,8 +155,7 @@ A sample payload for the body of a **PUT** request to create a Candidate:
         "customInt1" : 1974,
         "customText2" : "United States - New York,United States - New Jersey",
         "customText7" : "No - I will not require assistance from Axiom",
-        "source" : "Direct - Axiom website",
-        "address" : {"address1" : "--", "city" : "--", "state" : "--", "zip" : "--"}
+        "source" : "Direct - Axiom website"
     }
 The payload returned upon successful completion of the **PUT** will contain an "id" value for the newly created record.
 
