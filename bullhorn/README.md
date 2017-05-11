@@ -75,10 +75,9 @@ An example **POST** to _update_ a record (also used for **DELETE**):
 
 `POST {restUrl}entity/JobOrder/39922`
 
-Note: As of this writing **POST** and **DELETE** are not used by the app.
+Note: As of this writing **DELETE** is not used by the app.
 
-## File Uploads and Resume Parsing
-### File Uploads
+## File Uploads
 The application allows users to upload files which get attached to a Candidate record. In order to do this a **PUT** request is issued:
 
 `PUT {restUrl}file/Candidate/{candidate id}/raw`
@@ -92,12 +91,15 @@ A json payload is passed in the body of the request.
 |fileContent|data stream of the file|
 |contentType|mime type, multipart/form|
 |description|original file name|
-|type|field name|
+|type|maps to input field name|
 
     {
-        "fileType": "SAMPLE",
-        "externalID": "my-file-name.pdf",
-        "fileContent"
+        "fileType" : "SAMPLE",
+        "externalID" : "my-file-name.pdf",
+        "fileContent" : {streamed data},
+        "contentType" : "multipart/form",
+        "description" : "my file name.pdf",
+        "type" : "resume"
     }
 
 ## Endpoints Used
@@ -106,14 +108,15 @@ The list of available positions is returned from JobOrder. In order for a partic
 - isOpen=true
 - isPublic=1
 - isDeleted=false
+- employmentType IN ('Job Req', 'Bench Req')
 
-isDeleted must be checked because Bullhorn does not allow JobOrder records to be "hard" deleted but rather sets isDeleted to true (a so-called "soft" delete). Since the UI displays the total number of records found use the **search** endpoint:
+isDeleted must be checked because Bullhorn does not allow JobOrder records to be "hard" deleted but rather sets isDeleted to true (a so-called "soft" delete). Since a SQL IN clause is required use a query endpoint. Since the total records returned is required add the showTotalMatched=true parameter:
 
-`GET {restUrl}search/JobOrder?query=isOpen:true AND isPublic:1 AND isDeleted:false&fields=id,title&count=200&sort=-id`
+`GET {restUrl}query/JobOrder?where=isOpen=true AND isPublic=1 AND isDeleted=false AND employmentType IN ('Job Req','Bench Req')&fields=id,title&count=200&sort=-id&showTotalMatched=true`
 
 Note: `sort=-id` puts the list in reverse-creation order.
 
-The `/join-us/available-positions` UI requires the JobOrder's "title" and "address(city,state)". The job detail UI also displays the "description". Filters are available for "categories", "onSite", and "customText12" which is used for 'Job Level'. Going forward new JobOrder records should be certain to provide values for all of these fields.
+The `/join-us/available-positions` (Job Search) UI displays the JobOrder's "title" and "address(city,state)". The job detail UI also displays the "description". Filters are available for "categories" though as of this writing it is an open question whether this feature will ship.
 
 ### Candidate
 A Candidate record is created for each application submitted. The same user submitting two applications will create duplicate Candidate records. Some custom fields are used to store the data.
