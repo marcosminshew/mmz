@@ -131,9 +131,8 @@ A Candidate record is created for each application submitted. The same user subm
 Most of the values are entered by the user but the following are calculated or defaulted:
 
 |key|value|
-
-|name|concatenation firstName + " " lastName|
 |---|---|
+|name|concatenation firstName + " " lastName|
 |costumText2|comma separated string of selected values|
 |source|"Direct - Axiom website"|
 |address1|"--"|
