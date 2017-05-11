@@ -85,7 +85,7 @@ The application allows users to upload files which get attached to a Candidate r
 A json payload is passed in the body of the request.
 
 |key|value|
-| --- | --- |
+|---|---|
 |fileType|always send 'SAMPLE'|
 |externalID|hyphenated version of the file name|
 |fileContent|data stream of the file|
@@ -110,9 +110,9 @@ The list of available positions is returned from JobOrder. In order for a partic
 - isDeleted=false
 - employmentType IN ('Job Req', 'Bench Req')
 
-isDeleted must be checked because Bullhorn does not allow JobOrder records to be "hard" deleted but rather sets isDeleted to true (a so-called "soft" delete). Since a SQL IN clause is required use a query endpoint. Since the total records returned is required add the showTotalMatched=true parameter:
+isDeleted must be checked because Bullhorn does not allow JobOrder records to be "hard" deleted but rather sets isDeleted to true (a so-called "soft" delete). Since a SQL IN clause is required use the **query** endpoint. Since the total records returned is required add the `showTotalMatched=true` parameter:
 
-`GET {restUrl}query/JobOrder?where=isOpen=true AND isPublic=1 AND isDeleted=false AND employmentType IN ('Job Req','Bench Req')&fields=id,title&count=200&sort=-id&showTotalMatched=true`
+`GET {restUrl}query/JobOrder?where=isOpen=true AND isPublic=1 AND isDeleted=false AND employmentType IN ('Job Req','Bench Req')&fields=id,title,address(city,state)&count=200&sort=-id&showTotalMatched=true`
 
 Note: `sort=-id` puts the list in reverse-creation order.
 
