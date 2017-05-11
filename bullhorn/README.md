@@ -140,7 +140,7 @@ The fields updated by the application are:
 |customTextBlock5|--|user entry|
 |category|list.primary-legal-specialty in Contentstack|user selection|
 |costumText2|list.bar-admissions in Contentstack|comma separated string of selected values|
-|source|--|always "Direct - Axiom website"|
+|source|list.job-source in Contentstack|user selection|
 
 A sample payload for the body of a **PUT** request to create a Candidate:
 
@@ -150,10 +150,10 @@ A sample payload for the body of a **PUT** request to create a Candidate:
         "name" : "Hartmut Esslinger",
         "email" : "hartmut.esslinger@frogdesign.com",
         "phone" : "+1 415 442 4804",
-        "customTextBlock5" : "https://www.linkedin.com/in/hartmut",
+        "customTextBlock5" : "www.linkedin.com/in/hartmut",
         "category" : {"id" : 546654},
         "customInt1" : 1974,
-        "customText2" : "United States - New York,United States - New Jersey",
+        "customText2" : "US - New York,US - New Jersey",
         "customText7" : "No - I will not require assistance from Axiom",
         "source" : "Direct - Axiom website"
     }
