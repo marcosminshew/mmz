@@ -78,13 +78,13 @@ An example **POST** to _update_ a record (also used for **DELETE**):
 Note: As of this writing **DELETE** is not used by the app.
 
 ## File Uploads
-The application allows users to upload files which get attached to a Candidate record. In order to do this a **PUT** request is issued:
+The application allows users to upload files which get attached to a Candidate record. Accepted formats are text, html, pdf, doc, docx. In order to do this a **PUT** request is issued:
 
 `PUT {restUrl}file/Candidate/{candidate id}/raw`
 
 A json payload is passed in the body of the request.
 
-|property|value|
+|key|value|
 | --- | --- |
 |fileType|always send 'SAMPLE'|
 |externalID|hyphenated version of the file name|
@@ -123,30 +123,39 @@ A Candidate record is created for each application submitted. The same user subm
 
 |Custom field|Value Stored|
 |---|---|
-|customInt1|Qualifaction Year (PQE)|
+|customInt1|Qualification Year (PQE)|
 |customText2|Other Bar Admissions|
 |customText7|VISA sponsorship required?|
-|customText13|Admitted to the Bar?|
-|customText17|LinkedIn URL|
+|customTextBlock5|LinkedIn URL|
 
-Several of the Candidate.Address() fields are required in the Bullhorn UI. To facilitate modification of records using that interface the required Address fields get default values, "--". A default value is also provided for "source" (shown below). A sample payload for creating a Candidate (PUT):
+Several of the Candidate.Address() fields are required in the Bullhorn UI that are not entered in the web application. To facilitate modification of records using that interface the required Address fields get default values, "--". A default value is also provided for "source" (shown below). Most of the values are entered by the user but the following are calculated or defaulted:
+
+|key|value|
+|name|concatenation firstName + " " lastName|
+|costumText2|comma separated string of selected values|
+|source|"Direct - Axiom website"|
+|address1|"--"|
+|city|"--"|
+|state|"--"|
+|zip|"--"|
+
+A sample payload for creating a Candidate (PUT):
 
     {
-        "firstName": "firstName",
-        "lastName": "lastName",
-        "name": "firstName" + " " + "lastName",
-        "email": "email@address.com",
-        "phone": "(nnn) nnn-nnnn",
-        "customText17": "a Linkedin url",
-        "category": {"id": nnnnnn},
-        "customInt1": nnnn,
-        "customText13": "yes or no",
-        "customText2": "comma,separated,string",
-        "customText7": "yes or no",
-        "source": "Direct - Axiom website",
-        "address": {"address1": "--", "city": "--", "state": "--", "zip": "--"}
+        "firstName" : "Hartmut",
+        "lastName" : "Esslinger",
+        "name" : "Hartmut Esslinger",
+        "email" : "hartmut.esslinger@frogdesign.com",
+        "phone" : "+1 415 442 4804",
+        "customTextBlock5" : "https://www.linkedin.com/in/hartmut",
+        "category" : {"id" : 546654},
+        "customInt1" : 1974,
+        "customText2" : "United States - New York,United States - New Jersey",
+        "customText7" : "No - I will not require assistance from Axiom",
+        "source" : "Direct - Axiom website",
+        "address" : {"address1" : "--", "city" : "--", "state" : "--", "zip" : "--"}
     }
-The payload returned upon successful completion of the PUT will contain an "id" for the newly created record.
+The payload returned upon successful completion of the **PUT** will contain an "id" value for the newly created record.
 
 ### CandidateEducation
 One or more CandidateEducation records can be submitted by the application UI. Only one custom field is used.
@@ -158,34 +167,34 @@ One or more CandidateEducation records can be submitted by the application UI. O
 You must supply the Candidate "id" value returned from the previous step. A sample payload for creating a CandidateEducation:
 
     {
-        "candidate": {"id": nnnnnn},
-        "school": "school",
-        "major": "major",
-        "degree": "degree",
-        "gpa": n,
-        "customInt1": nnnn,
-        "comments": "comments"
+        "candidate" : {"id" : nnnnnn},
+        "school" : "school",
+        "major" : "major",
+        "degree" : "degree",
+        "gpa" : n,
+        "customInt1" : nnnn,
+        "comments" : "comments"
     }
 
 ### CandidateWorkHistory
 Similarly, one or more CandidateWorkHistory records can be submitted. No custom fields are used. Date values are entered as Unix timestamps in milliseconds. Again you need the Candidate "id". A sample payload:
 
     {
-        "candidate": {"id": nnnnnn},
-        "title": "title",
-        "companyName": "companyName",
-        "startDate": nnnnnnnnnnnnn,
-        "endDate": nnnnnnnnnnnnn,
-        "comments": "comments"
+        "candidate" : {"id" : nnnnnn},
+        "title" : "title",
+        "companyName" : "companyName",
+        "startDate" : nnnnnnnnnnnnn,
+        "endDate" : nnnnnnnnnnnnn,
+        "comments" : "comments"
     }
 
 ### JobSubmission
 Create a JobSubmission to complete the application process. You need both the Candidate id and the JobOrder "id". Set "dateWebResponse" to the current timestamp. "status" and "source" get default values as shown in the sample below. Setting "status" to "New Lead" will cause the JobSubmission to be treated as a "Job Web Response" in the Bullhorn UI which must be promoted to a "Submission" by a recruiter.
 
     {
-        "candidate": {"id": nnnnnn},
-        "dateWebResponse": nnnnnnnnnnnnn,
-        "jobOrder": {"id": nnnnnn},
-        "status": "New Lead",
-        "source": "axiomlaw.com web portal"
+        "candidate" : {"id" : nnnnnn},
+        "dateWebResponse" : nnnnnnnnnnnnn,
+        "jobOrder" : {"id" : nnnnnn},
+        "status" : "New Lead",
+        "source" : "axiomlaw.com web portal"
     }
