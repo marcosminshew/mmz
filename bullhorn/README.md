@@ -131,7 +131,9 @@ A Candidate record is created for each application submitted. The same user subm
 Several of the Candidate.Address() fields are required in the Bullhorn UI that are not entered in the web application. To facilitate modification of records using that interface the required Address fields get default values, "--". A default value is also provided for "source" (shown below). Most of the values are entered by the user but the following are calculated or defaulted:
 
 |key|value|
+
 |name|concatenation firstName + " " lastName|
+|---|---|
 |costumText2|comma separated string of selected values|
 |source|"Direct - Axiom website"|
 |address1|"--"|
