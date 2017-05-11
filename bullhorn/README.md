@@ -124,11 +124,11 @@ A Candidate record is created for each application submitted. The same user subm
 |Custom field|Value Stored|
 |---|---|
 |customInt1|Qualification Year (PQE)|
-|customText2|Other Bar Admissions|
+|customText2|Bar Admissions|
 |customText7|VISA sponsorship required?|
 |customTextBlock5|LinkedIn URL|
 
-Several of the Candidate.Address() fields are required in the Bullhorn UI that are not entered in the web application. To facilitate modification of records using that interface the required Address fields get default values, "--". A default value is also provided for "source" (shown below). Most of the values are entered by the user but the following are calculated or defaulted:
+Most of the values are entered by the user but the following are calculated or defaulted:
 
 |key|value|
 
@@ -141,7 +141,7 @@ Several of the Candidate.Address() fields are required in the Bullhorn UI that a
 |state|"--"|
 |zip|"--"|
 
-A sample payload for creating a Candidate (PUT):
+A sample payload for the body of a **PUT** request to create a Candidate:
 
     {
         "firstName" : "Hartmut",
@@ -166,37 +166,45 @@ One or more CandidateEducation records can be submitted by the application UI. O
 |---|---|
 |customInt1|Year of Graduation|
 
-You must supply the Candidate "id" value returned from the previous step. A sample payload for creating a CandidateEducation:
+The Candidate "id" value returned from the previous step must be supplied. All other values are entered by the user. A sample payload for creating a CandidateEducation:
 
     {
-        "candidate" : {"id" : nnnnnn},
-        "school" : "school",
-        "major" : "major",
-        "degree" : "degree",
-        "gpa" : n,
-        "customInt1" : nnnn,
-        "comments" : "comments"
+        "candidate" : {"id" : 456532},
+        "school" : "Stanford Law School",
+        "major" : "JD/MPP",
+        "degree" : "LL.M",
+        "gpa" : 4.0,
+        "customInt1" : 1974,
+        "comments" : "President of Stanford Chess Club"
     }
 
 ### CandidateWorkHistory
-Similarly, one or more CandidateWorkHistory records can be submitted. No custom fields are used. Date values are entered as Unix timestamps in milliseconds. Again you need the Candidate "id". A sample payload:
+Similarly, one or more CandidateWorkHistory records can be submitted. No custom fields are used. All values except the Candidate's id are entered by the user. Date values are entered as Unix timestamps in milliseconds. A sample payload:
 
     {
-        "candidate" : {"id" : nnnnnn},
-        "title" : "title",
-        "companyName" : "companyName",
-        "startDate" : nnnnnnnnnnnnn,
-        "endDate" : nnnnnnnnnnnnn,
-        "comments" : "comments"
+        "candidate" : {"id" : 456532},
+        "title" : "Founder and CEO",
+        "companyName" : "frog design, inc.",
+        "startDate" : -17308498000,
+        "endDate" : 1244995502000,
+        "comments" : "Form follows emotion"
     }
 
 ### JobSubmission
-Create a JobSubmission to complete the application process. You need both the Candidate id and the JobOrder "id". Set "dateWebResponse" to the current timestamp. "status" and "source" get default values as shown in the sample below. Setting "status" to "New Lead" will cause the JobSubmission to be treated as a "Job Web Response" in the Bullhorn UI which must be promoted to a "Submission" by a recruiter.
+Create a JobSubmission to complete the application process. You need both the Candidate id and the JobOrder "id". Set "dateWebResponse" to the current timestamp. "status" and "source" get default values as shown in the sample below. Setting "status" to "New Lead" will cause the JobSubmission to be treated as a "Job Web Response" in the Bullhorn UI which must be promoted to a "Submission" by a recruiter. All key values are calculated:
+
+|key|value|
+|---|---|
+|candidate|id value from payload returned from **PUT**|
+|dateWebResponse|current timestamp|
+|jobOrder|id from the selected JobOrder|
+|status|"New Lead"|
+|source|"Candidate Web Portal"|
 
     {
-        "candidate" : {"id" : nnnnnn},
-        "dateWebResponse" : nnnnnnnnnnnnn,
-        "jobOrder" : {"id" : nnnnnn},
+        "candidate" : {"id" : 456532},
+        "dateWebResponse" : 1494514788000,
+        "jobOrder" : {"id" : 25486},
         "status" : "New Lead",
-        "source" : "axiomlaw.com web portal"
+        "source" : "Candidate Web Portal"
     }
