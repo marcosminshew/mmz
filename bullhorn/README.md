@@ -77,7 +77,8 @@ An example **POST** to _update_ a record (also used for **DELETE**):
 
 Note: As of this writing **DELETE** is not used by the app.
 
-## File Uploads
+## Files
+### Uploading Files
 The application allows users to upload files which get attached to a Candidate record. Accepted formats are text, html, pdf, doc, docx. In order to do this a **PUT** request is issued:
 
 `PUT {restUrl}file/Candidate/{candidate id}/raw`
@@ -86,7 +87,7 @@ A json payload is passed in the body of the request.
 
 |key|value|
 |---|---|
-|fileType|always send 'SAMPLE'|
+|fileType|always send "SAMPLE"|
 |externalID|hyphenated version of the file name|
 |fileContent|data stream of the file|
 |contentType|mime type, multipart/form|
@@ -97,11 +98,52 @@ A json payload is passed in the body of the request.
         "fileType" : "SAMPLE",
         "externalID" : "my-file-name.pdf",
         "fileContent" : {streamed data},
-        "contentType" : "multipart/form",
+        "contentType" : "multipart/form-data",
         "description" : "my file name.pdf",
-        "type" : "resume"
+        "type" : "Resume/CV"
     }
 
+### Resume Parsing
+Resume files can be uploaded, parsed, and have a Candidate payload returned to the application. This data in the return can then be used to create the Candidate record and/or prepopulate the Job Application form. To accomplish this a **POST** request is issued:
+
+` POST {restUrl}resume/parseToCandidate?format=pdf
+
+The resume file itself is sent as multipart/form-data and the accepted formats are text, html, pdf, doc, docx. The payload returned will be similar to:
+
+    {
+        "candidate": {
+            "address": {
+                "address1": "123 Osoite Katu",
+                "address2": "Apartment 1",
+                "city": "Kaupunki",
+                "state": "MA",
+                "zip": "02210",
+                "countryID": 1
+            },
+        ...
+        },
+        "candidateEducation": [
+            {
+                "startDate": 978368400000,
+                "endDate": 1104598800000,
+                "graduationDate": 1104598800000,
+                "school": "Berkeley State University",
+                "city": "Santa Cruz",
+                "state": "CA",
+                "degree": "B.Sc",
+                "major": "COMPUTER SCIENCE",
+                "gpa": 4
+            }
+        ],
+        "candidateWorkHistory": [
+            {
+                "startDate": 1015002000000,
+                "endDate": 1188662400000,
+                "comments": "MA Bop Hop Hip"
+            }
+        ]
+    }
+    
 ## Endpoints Used
 ### JobOrder
 The list of available positions is returned from JobOrder. In order for a particular position to be available it must have:
@@ -119,9 +161,9 @@ Note: `sort=-id` puts the list in reverse-creation order.
 The `/join-us/available-positions` (Job Search) UI displays the JobOrder's "title" and "address(city,state)". The job detail UI also displays the "description". Filters are available for "categories" though as of this writing it is an open question whether this feature will ship.
 
 ### Candidate
-A Candidate record is created for each application submitted. The same user submitting two applications will create duplicate Candidate records. Some custom fields are used to store the data.
+A Candidate record is created for each application submitted. The same user submitting two applications will create duplicate Candidate records. Some custom fields are used to store the data. Note, the "entry field" values shown in the table are for the purposes of this document only. The actual field label displayed in the UI comes from Contentstack and may have been updated.
 
-|Custom field|Value Stored|
+|custom field|entry field|
 |---|---|
 |customInt1|Qualification Year (PQE)|
 |customText2|Bar Admissions|
@@ -139,7 +181,8 @@ The fields updated by the application are:
 |phone|--|user entry|
 |customTextBlock5|--|user entry|
 |category|list.primary-legal-specialty in Contentstack|user selection|
-|costumText2|list.bar-admissions in Contentstack|comma separated string of selected values|
+|customText2|list.bar-admissions in Contentstack|comma separated string of selected values|
+|customText7|list.visa-required-radio|user selection|
 |source|list.job-source in Contentstack|user selection|
 
 A sample payload for the body of a **PUT** request to create a Candidate:
@@ -162,7 +205,7 @@ The payload returned upon successful completion of the **PUT** will contain an "
 ### CandidateEducation
 One or more CandidateEducation records can be submitted by the application UI. Only one custom field is used.
 
-|Custom field|Value Stored|
+|Custom field|entry field|
 |---|---|
 |customInt1|Year of Graduation|
 
@@ -171,8 +214,8 @@ The Candidate "id" value returned from the previous step must be supplied. All o
     {
         "candidate" : {"id" : 456532},
         "school" : "Stanford Law School",
-        "major" : "JD/MPP",
-        "degree" : "LL.M",
+        "major" : "Political Science",
+        "degree" : "Phd",
         "gpa" : 4.0,
         "customInt1" : 1974,
         "comments" : "President of Stanford Chess Club"
