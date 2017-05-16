@@ -106,7 +106,7 @@ A json payload is passed in the body of the request.
 ### Resume Parsing
 Resume files can be uploaded, parsed, and have a Candidate payload returned to the application. This data in the return can then be used to create the Candidate record and/or prepopulate the Job Application form. To accomplish this a **POST** request is issued:
 
-` POST {restUrl}resume/parseToCandidate?format=pdf
+`POST {restUrl}resume/parseToCandidate?format=pdf`
 
 The resume file itself is sent as multipart/form-data and the accepted formats are text, html, pdf, doc, docx. The payload returned will be similar to:
 
@@ -139,7 +139,7 @@ The resume file itself is sent as multipart/form-data and the accepted formats a
             {
                 "startDate": 1015002000000,
                 "endDate": 1188662400000,
-                "comments": "MA Bop Hop Hip"
+                "comments": "Worked remote and on client site."
             }
         ]
     }
