@@ -6,9 +6,9 @@ Creating large numbers of Entries in Contentstack is time-consumming. As of this
 Beside being only one at a time the export/import will fail if your Entries have anything that requires a UID such as a "Reference" entity or an Asset. The UID(s) in the Stack you are importing into will have different UID values and the matching Entry/Asset will not be found. If there is sufficient data to warrant importing anyway edit the exported json manually and remove the offending UID value(s). You will still have to go in and manually hook up the Reference(s) and/or Asset(s) after the fact.
 
 Some markdown conventions are used for formatting string values:
-- In-line links
+- In-line links  
   To create an inline link use the markdown convention, i.e., \[this is a link\]\(to-a-location). If linking to a page within the site use named locations.
-- In-line emphasized text
+- In-line emphasized text  
   Emphasized text is presented in Axiom orange. To execute emphasized text use surrounding underscores \_like this\_.
 
 ***
