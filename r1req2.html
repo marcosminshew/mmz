@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Release Target Date
+	<table>
+		<tr>
+			<td class="confluenceTd">TBD</td>
+		</tr>
+		<tr role="row">
+			<td class="confluenceTd" colspan="1">Release Version</td>
+			<td class="confluenceTd" colspan="1">1.0 (Foundational Release)</td>
+		</tr>
+		<tr role="row">
+			<td class="confluenceTd">Status</td>
+			<td class="confluenceTd">
+				<div class="content-wrapper">
+					TBD
+				</div>
+			</td>
+		</tr>
+		<tr role="row">
+			<td class="confluenceTd" colspan="1">Basic R1 Release Mission &amp; Goals</td>
+			<td class="confluenceTd" colspan="1">
+				Foundational release for future Polaris roadmap. Integrate offers/loyalty into ecommerce on a new ecommerce platform and extend a new visual look/feel across the banner + ecommerce assets.&nbsp;
+				<ul>
+					<li>Take a big step toward unifying our digital experiences</li>
+					<li>Have coupons/offers available in ecommerce</li>
+					<li>Unify design language &amp; navigation system between our digital experiences</li>
+					<li>Integrate user account &amp; loyalty (gas, rewards, offers)</li>
+					<li>Launch a new ecommerce platform (if timing allows)</li>
+				</ul>
+			</td>
+		</tr>
+		<tr role="row">
+			<td class="confluenceTd" colspan="1">KPI's</td>
+			<td class="confluenceTd" colspan="1">
+				<ul>
+					<li><span style="color: rgb(255,0,0);"><strong>Drive measurable in-store traffic through digital (digital attribution)</strong></span></li>
+					<li>Ecommerce Revenue Growth</li>
+					<li>Improve technical metrics ie reduce page load performance</li>
+					<li>Increase redemptions for J4U</li>
+					<li>Customer retention (repeat purchasers)</li>
+					<li>Increase Delivery Customers</li>
+				</ul>
+			</td>
+		</tr>
+		<tr role="row">
+			<td class="confluenceTd" colspan="1">Key Business Decisions</td>
+			<td class="confluenceTd" colspan="1">
+				<ul>
+					<li>Pricing &gt; what do we show i.e. in-store vs. online?</li>
+					<li>CPG revenue &gt; what are we able to do w/ “clips” etc.?</li>
+					<li>Umbrella loyalty program &gt; how do we communicate this?</li>
+					<li>Resource gaps &gt; will certain new features/capabilities require new resources?</li>
+					<li>Analytics &gt; how do we track in-store traffic attributable to digital?</li>
+					<li>Drive Traffic &gt; needs to be at forefront of our experience to get more customers into our stores</li>
+				</ul>
+			</td>
+		</tr>
+		<tr role="row">
+			<td class="confluenceTd" colspan="1">Key Resources</td>
+			<td class="confluenceTd" colspan="1">
+				<div class="content-wrapper">
+					<ul>
+						<li>IBM IX pre-checkout flow:&nbsp;<a class="external-link" href="https://ibm.ent.box.com/s/htsfph46h2rdofvwo4oz3syvtglacpv9" rel="nofollow">https://ibm.ent.box.com/s/htsfph46h2rdofvwo4oz3syvtglacpv9</a>
+						</li>
+						<li>IBM IX invision checkout flow:&nbsp;<a class="external-link" href="https://ibm.invisionapp.com/share/GUE5O7BCF#/screens" rel="nofollow">https://ibm.invisionapp.com/share/GUE5O7BCF#/screens</a>
+						</li>
+						<li>Nebula UI <a data-linked-resource-container-id="164411" data-linked-resource-container-version="73" data-linked-resource-content-type="application/vnd.openxmlformats-officedocument.wordprocessingml.document" data-linked-resource-default-alias="Nebula UI.docx" data-linked-resource-id="3866653" data-linked-resource-type="attachment" data-linked-resource-version="1" data-nice-type="Microsoft Word Document" href="/wiki/download/attachments/164411/Nebula%20UI.docx?version=1&amp;modificationDate=1509036166693&amp;cacheVersion=1&amp;api=v2">Nebula UI.docx</a>
+						</li>
+						<li>
+							<a data-linked-resource-container-id="164411" data-linked-resource-container-version="73" data-linked-resource-content-type="application/vnd.openxmlformats-officedocument.presentationml.presentation" data-linked-resource-default-alias="FROG Design Walkthrough v2.pptx" data-linked-resource-id="3637268" data-linked-resource-type="attachment" data-linked-resource-version="1" data-nice-type="Microsoft PowerPoint Presentation" href="/wiki/download/attachments/164411/FROG%20Design%20Walkthrough%20v2.pptx?version=1&amp;modificationDate=1509036198241&amp;cacheVersion=1&amp;api=v2">FROG Design Walkthrough v2.pptx</a>&nbsp;
+						</li>
+						<li>IBM Nebula Use cases:&nbsp;<a data-linked-resource-container-id="164411" data-linked-resource-container-version="73" data-linked-resource-content-type="application/zip" data-linked-resource-default-alias="User Stories.zip" data-linked-resource-id="4227073" data-linked-resource-type="attachment" data-linked-resource-version="1" data-nice-type="Zip Archive" href="/wiki/download/attachments/164411/User%20Stories.zip?version=1&amp;modificationDate=1509122865925&amp;cacheVersion=1&amp;api=v2">User Stories.zip</a>
+						</li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<h3 class="auto-cursor-target" id="R1Requirements(updated)-Assumptions"><strong>Assumptions</strong></h3>
+	<ul>
+		<li class="auto-cursor-target">This is focused on digital properties only. The below requirements extend to web, mobile web, and native mobile digital experiences.&nbsp;</li>
+		<li class="auto-cursor-target">The below requirements will be built on a new eCommerce platform (IBM websphere v8) + Adobe Experience Manager (CMS &amp; DAM) integrated with Loyalty Platform (Nimbus &amp; Copient).</li>
+		<li class="auto-cursor-target">This release will focus on 1 banner first, then be supported by rolling releases for all banners.</li>
+		<li class="auto-cursor-target">We will retain 2 mobile apps and 2 desktop experiences (banner &amp; delivery).&nbsp;</li>
+	</ul>
+	<h3 id="R1Requirements(updated)-Definitions">Definitions</h3>
+	<p><span style="color: rgb(0,0,0);">Redesign:&nbsp; major changes to interactions, flows, and structure.</span></p>
+	<p><span style="color: rgb(0,0,0);">Re-skin: apply design language to existing content and interactions.</span></p>
+	<h3 class="auto-cursor-target" id="R1Requirements(updated)-r1BaselineFunctionalRequirements">r1 Baseline Functional Requirements</h3>
+	<p><br></p>
+	<div class="table-wrap">
+		<table class="wrapped relative-table confluenceTable tablesorter tablesorter-default" role="grid" style="width: 100.0%;">
+			<colgroup>
+				<col style="width: 6.39785%;">
+				<col style="width: 8.49462%;">
+				<col style="width: 9.4086%;">
+				<col style="width: 8.87097%;">
+				<col style="width: 40.3226%;">
+				<col style="width: 12.2043%;">
+				<col style="width: 4.83871%;">
+				<col style="width: 3.8172%;">
+				<col style="width: 5.64516%;">
+			</colgroup>
+			<thead>
+				<tr class="tablesorter-headerRow" role="row">
+					<th aria-disabled="false" aria-label="Feature: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="0" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							<p><strong>Feature</strong></p>
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Description: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="1" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							<p><strong>Description</strong></p>
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Requirements: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-column="2" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							Requirements
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Comments: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-column="3" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							Comments
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Legacy UI Image (Web + Apps): No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-column="4" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							Legacy UI Image (Web + Apps)
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Nebula UI: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-column="5" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							Nebula UI
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="r1 Frog (Complete re-design or re-skin): No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-column="6" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							r1 Frog (Complete re-design or re-skin)
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Priority (Must v. Nice): No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-column="7" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							Priority (Must v. Nice)
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Key Technology: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-column="8" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							Key Technology
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody aria-live="polite" aria-relevant="all">
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Homepage</td>
+					<td class="confluenceTd" colspan="1">Expose major feature sets of the digital experience, preserving the as-is features of the loyalty/couponing experience + ecommerce.&nbsp;</td>
+					<td class="confluenceTd" colspan="1">
+						<p>The customer will land on a new banner homepage which will include all delivery, loyalty, and couponing features in 1 information architecture.&nbsp;</p>
+						<p>The customer can easily find the following features:</p>
+						<ul>
+							<li>Profile</li>
+							<li>Search (product + offers)</li>
+							<li>Location / Store Detection</li>
+							<li>Promo Areas (Hero area)</li>
+							<li>Content blocks</li>
+							<li>Weekly Ad</li>
+							<li>Header/Footer</li>
+							<li>Logged in &amp; Out States</li>
+							<li>Deals/Promotions</li>
+							<li>Loyalty (j4u + Gas Rewards + Grocery Rewards)</li>
+							<li>Grocery Delivery</li>
+							<li>Pharmacy &amp; Nutrition</li>
+							<li>Recipes</li>
+						</ul>
+						<p>The customer will be immediately greeted with a "what's your go-to store" prompt which allows the customer to select (a) show nearby stores or (b) search against zipcode/city which will adjust offers/pricing/availability all against the chosen store.</p>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<p>Need to make sure we don't mess with overall ease of use /accessibility for J4U, Weekly Circular Ad - customers; this becomes a reskin vs. redesign effort.</p>
+						<p><br></p>
+						<p>Can we remove recipes?</p>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.22.05%20PM.png?version=1&amp;modificationDate=1509569867368&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.22.05 PM.png" data-linked-resource-id="5963779" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="a515dd58-03fa-4630-a03a-9b57289d009a" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.22.05%20PM.png?version=1&amp;modificationDate=1509569867368&amp;cacheVersion=1&amp;api=v2&amp;width=298&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.22.05%20PM.png?version=1&amp;modificationDate=1509569867368&amp;cacheVersion=1&amp;api=v2&amp;width=596&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.22.05%20PM.png?version=1&amp;modificationDate=1509569867368&amp;cacheVersion=1&amp;api=v2&amp;width=298&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_17-49-20.png?version=1&amp;modificationDate=1509569867739&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_17-49-20.png" data-linked-resource-id="5963783" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="62edc21a-b800-4ce7-8f92-346e0f4eeecb" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_17-49-20.png?version=1&amp;modificationDate=1509569867739&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_17-49-20.png?version=1&amp;modificationDate=1509569867739&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_17-49-20.png?version=1&amp;modificationDate=1509569867739&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-11-01%20at%201.19.20%20PM.png?version=1&amp;modificationDate=1509569868013&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-11-01 at 1.19.20 PM.png" data-linked-resource-id="5963787" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="423a2803-dbfa-4691-9071-b6a54401cbfa" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-11-01%20at%201.19.20%20PM.png?version=1&amp;modificationDate=1509569868013&amp;cacheVersion=1&amp;api=v2&amp;width=299&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-11-01%20at%201.19.20%20PM.png?version=1&amp;modificationDate=1509569868013&amp;cacheVersion=1&amp;api=v2&amp;width=598&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-11-01%20at%201.19.20%20PM.png?version=1&amp;modificationDate=1509569868013&amp;cacheVersion=1&amp;api=v2&amp;width=299&amp;height=250 1x"></span></p>
+							<p><br></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-26%20at%208.18.06%20AM.png?version=1&amp;modificationDate=1509569868262&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-26 at 8.18.06 AM.png" data-linked-resource-id="5963791" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="92ddf85e-3f0c-4155-8a66-d49d0309333c" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%208.18.06%20AM.png?version=1&amp;modificationDate=1509569868262&amp;cacheVersion=1&amp;api=v2&amp;width=178&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%208.18.06%20AM.png?version=1&amp;modificationDate=1509569868262&amp;cacheVersion=1&amp;api=v2&amp;width=356&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%208.18.06%20AM.png?version=1&amp;modificationDate=1509569868262&amp;cacheVersion=1&amp;api=v2&amp;width=178&amp;height=250 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-26%20at%208.19.54%20AM.png?version=1&amp;modificationDate=1509569868536&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-26 at 8.19.54 AM.png" data-linked-resource-id="5963795" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="3f4499e7-5674-4e19-9bd6-ef4d93eef888" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%208.19.54%20AM.png?version=1&amp;modificationDate=1509569868536&amp;cacheVersion=1&amp;api=v2&amp;width=120&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%208.19.54%20AM.png?version=1&amp;modificationDate=1509569868536&amp;cacheVersion=1&amp;api=v2&amp;width=240&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%208.19.54%20AM.png?version=1&amp;modificationDate=1509569868536&amp;cacheVersion=1&amp;api=v2&amp;width=120&amp;height=250 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-19-18.png?version=1&amp;modificationDate=1509569868804&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-19-18.png" data-linked-resource-id="5963799" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="738ebfed-8d82-4178-a1da-42e65bc385e3" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-19-18.png?version=1&amp;modificationDate=1509569868804&amp;cacheVersion=1&amp;api=v2&amp;width=125&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-19-18.png?version=1&amp;modificationDate=1509569868804&amp;cacheVersion=1&amp;api=v2&amp;width=250&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-19-18.png?version=1&amp;modificationDate=1509569868804&amp;cacheVersion=1&amp;api=v2&amp;width=125&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">Complete redesign</td>
+					<td class="confluenceTd" colspan="1">Must&nbsp;</td>
+					<td class="confluenceTd" colspan="1">AEM (CMS + DAM) + Websphere Commerce</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">Onboarding / Guide Me</td>
+					<td class="confluenceTd">As we aspire to have an integrated experience, we need to guide different types of customers to what features their looking to explore.</td>
+					<td class="confluenceTd" colspan="1">The customer will interact with simple onboarding/guide me content when they are a first-time user of grocery delivery/ DUG. The customer will understand the major capabilities &amp; value proposition of each service. The customer will have a major call to action (ie sign up for loyalty, enter your store for delivery)</td>
+					<td class="confluenceTd"><br></td>
+					<td class="confluenceTd">NA today&nbsp;– As we aspire to have an integrated experience, we need to guide different types of customers throughout the new experience based on what they are interested in.&nbsp;</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-10-10.png?version=1&amp;modificationDate=1509569869076&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-10-10.png" data-linked-resource-id="5963803" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="99981eda-7ac7-4b40-a3e4-bbdf595d6e2b" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-10-10.png?version=1&amp;modificationDate=1509569869076&amp;cacheVersion=1&amp;api=v2&amp;width=202&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-10-10.png?version=1&amp;modificationDate=1509569869076&amp;cacheVersion=1&amp;api=v2&amp;width=404&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-10-10.png?version=1&amp;modificationDate=1509569869076&amp;cacheVersion=1&amp;api=v2&amp;width=202&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd">Complete Redesign</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">AEM (CMS + DAM)</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>Tutorial</p>
+					</td>
+					<td class="confluenceTd">How it works&nbsp;</td>
+					<td class="confluenceTd" colspan="1">
+						<p>There will be 2 tutorials for each Mobile app which explains the key features and prompts the customer to sign in or sign up.&nbsp;</p>
+					</td>
+					<td class="confluenceTd">
+						<p>This is possibly just a content page / series of pages vs. custom on boarding experience...&nbsp;</p>
+						<p><br></p>
+					</td>
+					<td class="confluenceTd">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-16_16-3-35.png?version=1&amp;modificationDate=1509569869340&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-16_16-3-35.png" data-linked-resource-id="5963807" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="42a70494-de19-4d59-84d9-d5fda35d7259" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-16_16-3-35.png?version=1&amp;modificationDate=1509569869340&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-16_16-3-35.png?version=1&amp;modificationDate=1509569869340&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-16_16-3-35.png?version=1&amp;modificationDate=1509569869340&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-16_16-3-49.png?version=1&amp;modificationDate=1509569869577&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-16_16-3-49.png" data-linked-resource-id="5963811" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="dac3bebc-969e-4b84-8607-22abc7e76873" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-16_16-3-49.png?version=1&amp;modificationDate=1509569869577&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-16_16-3-49.png?version=1&amp;modificationDate=1509569869577&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-16_16-3-49.png?version=1&amp;modificationDate=1509569869577&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-16_16-4-3.png?version=1&amp;modificationDate=1509569869822&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-16_16-4-3.png" data-linked-resource-id="5963815" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="d64955ef-9a0c-47cc-b7ab-be559163713e" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-16_16-4-3.png?version=1&amp;modificationDate=1509569869822&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-16_16-4-3.png?version=1&amp;modificationDate=1509569869822&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-16_16-4-3.png?version=1&amp;modificationDate=1509569869822&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-16_16-6-26.png?version=1&amp;modificationDate=1509569870086&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-16_16-6-26.png" data-linked-resource-id="5963819" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="037760b8-d370-420e-bf9b-72fe6fbeea47" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-16_16-6-26.png?version=1&amp;modificationDate=1509569870086&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-16_16-6-26.png?version=1&amp;modificationDate=1509569870086&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-16_16-6-26.png?version=1&amp;modificationDate=1509569870086&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-16_16-8-0.png?version=1&amp;modificationDate=1509569870476&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-16_16-8-0.png" data-linked-resource-id="5963823" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="01cb4bba-d06e-4250-aeb1-d281ed85fd63" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-16_16-8-0.png?version=1&amp;modificationDate=1509569870476&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-16_16-8-0.png?version=1&amp;modificationDate=1509569870476&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-16_16-8-0.png?version=1&amp;modificationDate=1509569870476&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-38-59.png?version=1&amp;modificationDate=1509569870768&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-38-59.png" data-linked-resource-id="5963827" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="19bdf80d-e595-4dfc-86ad-64ee657b3f98" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-38-59.png?version=1&amp;modificationDate=1509569870768&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-38-59.png?version=1&amp;modificationDate=1509569870768&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-38-59.png?version=1&amp;modificationDate=1509569870768&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+							<p><br></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd">Reskin</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">Native iOS + Android</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>Single Sign On</p>
+					</td>
+					<td class="confluenceTd">
+						<p>SSO across all digital properties (loyalty &amp; delivery)</p>
+					</td>
+					<td class="confluenceTd" colspan="1">The customer will no longer have to enter multiple usernames/passwords to access different services of this new digital experience namely grocery delivery + offers/coupons/j4u.&nbsp;</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.24.54%20PM.png?version=1&amp;modificationDate=1509569871036&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.24.54 PM.png" data-linked-resource-id="5963831" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="4c8bc6d0-b574-4897-b23d-0d5d3b279b24" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.24.54%20PM.png?version=1&amp;modificationDate=1509569871036&amp;cacheVersion=1&amp;api=v2&amp;width=388&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.24.54%20PM.png?version=1&amp;modificationDate=1509569871036&amp;cacheVersion=1&amp;api=v2&amp;width=776&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.24.54%20PM.png?version=1&amp;modificationDate=1509569871036&amp;cacheVersion=1&amp;api=v2&amp;width=388&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">NA&nbsp;</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">OKTA</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Registration</td>
+					<td class="confluenceTd" colspan="1">Sign in / Sign Up flows</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>The customer will be able to sign in as a returning user using email &amp; password.&nbsp;</li>
+							<li>The customer will see static content blocks explaining the benefits of creating an account (loyalty, offers, delivery all in one account).&nbsp;</li>
+							<li>The customer can quickly sign in using a hover state in the top header navigation.&nbsp;</li>
+							<li>The customer can select "remember me" in the sign in &amp; sign up states so the system saves the credentials.&nbsp;</li>
+							<li>The customer can select "show password" when in the sign in &amp; sign up states so they can view their password before submission.&nbsp;</li>
+							<li>The customer can access a simple email feature for Forgot Password.</li>
+							<li>The system shall pre-populate a customers nearest store location by IP in the sign up experience field, but allow the customer to adjust that<br>
+							"home" store using search by zip/city or show nearby.</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Propose we remove Social login (FB/Twitter/Google) for scope &amp; support</li>
+							<li>How do we communicate the difference in accounts (ie loyalty vs. delivery)</li>
+							<li>Propose we remove security questions.&nbsp;</li>
+							<li>Propose we pre-pop nearest store using IP geo detect.</li>
+							<li>Propose finger-print log in at a later stage for mobile.&nbsp;</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.23.53%20PM.png?version=1&amp;modificationDate=1509569871296&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.23.53 PM.png" data-linked-resource-id="5963835" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="d89ed994-7cdb-4837-a099-a49b67224217" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.23.53%20PM.png?version=1&amp;modificationDate=1509569871296&amp;cacheVersion=1&amp;api=v2&amp;width=506&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.23.53%20PM.png?version=1&amp;modificationDate=1509569871296&amp;cacheVersion=1&amp;api=v2&amp;width=1012&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.23.53%20PM.png?version=1&amp;modificationDate=1509569871296&amp;cacheVersion=1&amp;api=v2&amp;width=506&amp;height=250 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%208.13.21%20PM.png?version=1&amp;modificationDate=1509569871557&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 8.13.21 PM.png" data-linked-resource-id="5963839" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="7c0b57bf-0ff6-412f-8b81-a98ab00dc22f" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.13.21%20PM.png?version=1&amp;modificationDate=1509569871557&amp;cacheVersion=1&amp;api=v2&amp;width=308&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.13.21%20PM.png?version=1&amp;modificationDate=1509569871557&amp;cacheVersion=1&amp;api=v2&amp;width=616&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.13.21%20PM.png?version=1&amp;modificationDate=1509569871557&amp;cacheVersion=1&amp;api=v2&amp;width=308&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_18-1-14.png?version=1&amp;modificationDate=1509569871839&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_18-1-14.png" data-linked-resource-id="5963843" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="b345861d-08c9-4e61-aebc-d468c2f9965e" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_18-1-14.png?version=1&amp;modificationDate=1509569871839&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_18-1-14.png?version=1&amp;modificationDate=1509569871839&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_18-1-14.png?version=1&amp;modificationDate=1509569871839&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-26%20at%208.21.22%20AM.png?version=1&amp;modificationDate=1509569872091&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-26 at 8.21.22 AM.png" data-linked-resource-id="5963847" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="947eaa5b-1e2d-43f3-a569-b600bc257a2a" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%208.21.22%20AM.png?version=1&amp;modificationDate=1509569872091&amp;cacheVersion=1&amp;api=v2&amp;width=164&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%208.21.22%20AM.png?version=1&amp;modificationDate=1509569872091&amp;cacheVersion=1&amp;api=v2&amp;width=328&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%208.21.22%20AM.png?version=1&amp;modificationDate=1509569872091&amp;cacheVersion=1&amp;api=v2&amp;width=164&amp;height=250 1x"></span></p>
+							<p><br></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-22-53.png?version=1&amp;modificationDate=1509569872352&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-22-53.png" data-linked-resource-id="5963851" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="300ca2f7-75b5-4388-a866-e186971e10cb" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-22-53.png?version=1&amp;modificationDate=1509569872352&amp;cacheVersion=1&amp;api=v2&amp;width=226&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-22-53.png?version=1&amp;modificationDate=1509569872352&amp;cacheVersion=1&amp;api=v2&amp;width=452&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-22-53.png?version=1&amp;modificationDate=1509569872352&amp;cacheVersion=1&amp;api=v2&amp;width=226&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">Reskin Only</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">OKTA + Websphere Commerce</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>Coupons</p>
+					</td>
+					<td class="confluenceTd">
+						<p>Browse/search, clip (add), save, and checkout integration.</p>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>The j4u couponing experience will only be available to signed in customers. There will be a state for non-signed in customers which explains the concept &amp; value proposition of couponing all displayed using content blocks.&nbsp;</li>
+							<li>The customer shall access a couponing experience which displays coupons they may be interested in based on the home store they have selected which is clearly displayed in the header navigation.&nbsp;</li>
+							<li>A customer can search all available coupons by keyword + barcode scan (mobile only).&nbsp;</li>
+							<li>A customer can browse coupons using major filters like: past purchase history, categories (special offers, fruits/veggies, bread &amp; bakery, beverages), special events, most recent, and expiring.&nbsp;</li>
+							<li>A first-time customer shall experience a "how it works" content block which displays prominently and describes how the couponing experience works for redemption in store or for delivery/pickup. The "how it works" feature will then become a less prominently but still accessible link for future reminding.</li>
+							<li>A customer can view a coupon information including the product name, product images, offer details, personalized pricing, and other text based disclaimers.</li>
+							<li>A customer can complete either "add to list" or "add to delivery order" for coupons.&nbsp;</li>
+							<li>When a customer selects "add to list," provide a visual indication of where the list is stored in the UI.&nbsp;</li>
+							<li>When a customer selects "add to list" as a first-time user, provide an overlay message that reminds them how the process works for redeeming/using coupons either in store-on line.&nbsp;</li>
+							<li>A customer can view available coupons/offers at the product level (ie PDP page), so they can more easily associate/“clip” an offer to a delivery / DUG item in the shopping cart.</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Not reinventing the concept, but integrating throughout&nbsp;</li>
+							<li><span style="color: rgb(0,0,0);">How do we communcate "add to bag vs clip coupon"? There's CPG revenue tied to "clipping" experience.&nbsp;</span></li>
+							<li><strong><span style="color: rgb(255,0,0);">Can we display a "total savings" summary content block that takes all the "added"/"clipped" coupons and reminds the customer how much they've saved? (may be r1+)</span></strong></li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.25.33%20PM.png?version=1&amp;modificationDate=1509569872592&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.25.33 PM.png" data-linked-resource-id="5963855" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="f7d48b15-b4fd-450d-86c9-510aa381bb79" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.25.33%20PM.png?version=1&amp;modificationDate=1509569872592&amp;cacheVersion=1&amp;api=v2&amp;width=458&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.25.33%20PM.png?version=1&amp;modificationDate=1509569872592&amp;cacheVersion=1&amp;api=v2&amp;width=776&amp;height=254 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.25.33%20PM.png?version=1&amp;modificationDate=1509569872592&amp;cacheVersion=1&amp;api=v2&amp;width=458&amp;height=150 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-18%20at%206.37.19%20PM.png?version=1&amp;modificationDate=1509569872921&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-18 at 6.37.19 PM.png" data-linked-resource-id="5963859" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="94a51184-b193-4eab-adbb-6d569c1a77be" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-18%20at%206.37.19%20PM.png?version=1&amp;modificationDate=1509569872921&amp;cacheVersion=1&amp;api=v2&amp;width=167&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-18%20at%206.37.19%20PM.png?version=1&amp;modificationDate=1509569872921&amp;cacheVersion=1&amp;api=v2&amp;width=334&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-18%20at%206.37.19%20PM.png?version=1&amp;modificationDate=1509569872921&amp;cacheVersion=1&amp;api=v2&amp;width=167&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-11-4.png?version=1&amp;modificationDate=1509569873164&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-11-4.png" data-linked-resource-id="5963863" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="836aacf4-f1bf-4f38-8796-45032a03cd8e" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-11-4.png?version=1&amp;modificationDate=1509569873164&amp;cacheVersion=1&amp;api=v2&amp;width=142&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-11-4.png?version=1&amp;modificationDate=1509569873164&amp;cacheVersion=1&amp;api=v2&amp;width=284&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-11-4.png?version=1&amp;modificationDate=1509569873164&amp;cacheVersion=1&amp;api=v2&amp;width=142&amp;height=250 1x"></span></p>
+						<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-12-23.png?version=1&amp;modificationDate=1509569873420&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-12-23.png" data-linked-resource-id="5963867" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="39ff765c-18b9-41f4-ac6a-104303246329" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-12-23.png?version=1&amp;modificationDate=1509569873420&amp;cacheVersion=1&amp;api=v2&amp;width=85&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-12-23.png?version=1&amp;modificationDate=1509569873420&amp;cacheVersion=1&amp;api=v2&amp;width=170&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-12-23.png?version=1&amp;modificationDate=1509569873420&amp;cacheVersion=1&amp;api=v2&amp;width=85&amp;height=250 1x"></span></p>
+					</td>
+					<td class="confluenceTd" colspan="1">Complete Redesign</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">Quotient&nbsp;</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Integrated Offers</td>
+					<td class="confluenceTd" colspan="1">Integrated offers (eCommerce, Weekly Circular, and Loyalty)</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>If a customer sees an offer or promotion (ie promo code for free snack) they wish to use, allow them to select the offer and immediately have that offer applied to either their in-store list or delivery shopping cart.&nbsp;</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Not reinventing the concept</li>
+							<li>not sure what guard rails we need to know here ie whats in flight, who in the business is making the decisions, etc.</li>
+							<li>Moving from MWG to Quotient</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.26.28%20PM.png?version=1&amp;modificationDate=1509569873686&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.26.28 PM.png" data-linked-resource-id="5963871" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="2085188d-d319-4ff3-afa3-10f6e94afdbc" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.26.28%20PM.png?version=1&amp;modificationDate=1509569873686&amp;cacheVersion=1&amp;api=v2&amp;width=383&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.26.28%20PM.png?version=1&amp;modificationDate=1509569873686&amp;cacheVersion=1&amp;api=v2&amp;width=606&amp;height=237 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.26.28%20PM.png?version=1&amp;modificationDate=1509569873686&amp;cacheVersion=1&amp;api=v2&amp;width=383&amp;height=150 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%208.00.48%20PM.png?version=1&amp;modificationDate=1509569873984&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 8.00.48 PM.png" data-linked-resource-id="5963875" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="55184dbf-1508-463a-981d-47fa7bde015f" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.00.48%20PM.png?version=1&amp;modificationDate=1509569873984&amp;cacheVersion=1&amp;api=v2&amp;width=347&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.00.48%20PM.png?version=1&amp;modificationDate=1509569873984&amp;cacheVersion=1&amp;api=v2&amp;width=694&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.00.48%20PM.png?version=1&amp;modificationDate=1509569873984&amp;cacheVersion=1&amp;api=v2&amp;width=347&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_18-36-29.png?version=1&amp;modificationDate=1509569874275&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_18-36-29.png" data-linked-resource-id="5963879" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="640ec939-3d3a-4698-96ff-4fb53bc23fac" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_18-36-29.png?version=1&amp;modificationDate=1509569874275&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_18-36-29.png?version=1&amp;modificationDate=1509569874275&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_18-36-29.png?version=1&amp;modificationDate=1509569874275&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-47-24.png?version=1&amp;modificationDate=1509569874601&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-47-24.png" data-linked-resource-id="5963883" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="28a4f458-5d68-4ca9-9a60-6e3a9f2a5794" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-47-24.png?version=1&amp;modificationDate=1509569874601&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-47-24.png?version=1&amp;modificationDate=1509569874601&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-47-24.png?version=1&amp;modificationDate=1509569874601&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-14-35.png?version=1&amp;modificationDate=1509569874853&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-14-35.png" data-linked-resource-id="5963887" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="a5cc3158-bd5c-4627-b9db-96f2775d6c0d" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-14-35.png?version=1&amp;modificationDate=1509569874853&amp;cacheVersion=1&amp;api=v2&amp;width=122&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-14-35.png?version=1&amp;modificationDate=1509569874853&amp;cacheVersion=1&amp;api=v2&amp;width=244&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-14-35.png?version=1&amp;modificationDate=1509569874853&amp;cacheVersion=1&amp;api=v2&amp;width=122&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">Complete Redesign</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">
+						<p>Weekly Circular = MWG moving to Quotient</p>
+						<p>eCommerce offers&nbsp;</p>
+					</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Weekly Circular / Ad</td>
+					<td class="confluenceTd" colspan="1">Digitized weekly coupons</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>A customer can access the weekly circular/ad in either a logged in or logged out state.&nbsp;</li>
+							<li>A customer can search all available weekly circular/ads by keyword + barcode scan (mobile only).&nbsp;</li>
+							<li>Allow customer to "clip" or add a weekly coupon to their in-store shopping list.</li>
+							<li>The weekly circular/ Ad experience will have a state for non-signed in customers which allows a customer to add a coupon/offer and immediately prompts for signing in/sign up.</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<p>powered by quotient</p>
+						<p><br></p>
+						<ul>
+							<li><span style="color: rgb(0,0,0);">Frame the Quotient UI or re-design from scratch and have Quotient build appropriate APIs</span></li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-18%20at%201.20.06%20PM.png?version=1&amp;modificationDate=1509569875149&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-18 at 1.20.06 PM.png" data-linked-resource-id="5963891" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="e17ca1bf-1518-4130-ac34-5117fdbf6379" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-18%20at%201.20.06%20PM.png?version=1&amp;modificationDate=1509569875149&amp;cacheVersion=1&amp;api=v2&amp;width=312&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-18%20at%201.20.06%20PM.png?version=1&amp;modificationDate=1509569875149&amp;cacheVersion=1&amp;api=v2&amp;width=624&amp;height=300 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-18%20at%201.20.06%20PM.png?version=1&amp;modificationDate=1509569875149&amp;cacheVersion=1&amp;api=v2&amp;width=312&amp;height=150 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_18-13-54.png?version=1&amp;modificationDate=1509569875435&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_18-13-54.png" data-linked-resource-id="5963895" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="e323bab5-9027-4f9a-a4ef-cfa7702427b5" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_18-13-54.png?version=1&amp;modificationDate=1509569875435&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_18-13-54.png?version=1&amp;modificationDate=1509569875435&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_18-13-54.png?version=1&amp;modificationDate=1509569875435&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Reskin</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">Weekly Circular = MWG moving to Quotient</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>Store Locator</p>
+					</td>
+					<td class="confluenceTd">Store &amp; Gas location locator</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>A customer can search for a store &amp;/or gas station based on keyword (city, state, zip format) and closest to the location we can detect from their IP.</li>
+							<li>A customer can see relevant store/gas station information like Name, Address, Phone Numbers, Store Hours, Weekly Ad Circular, and Directions.&nbsp;</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Working on yext integration from brandify</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.48.42%20PM.png?version=1&amp;modificationDate=1509569875682&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.48.42 PM.png" data-linked-resource-id="5963899" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="eaf94a19-ae26-47fb-8fe4-1dbb6322921f" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.48.42%20PM.png?version=1&amp;modificationDate=1509569875682&amp;cacheVersion=1&amp;api=v2&amp;width=299&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.48.42%20PM.png?version=1&amp;modificationDate=1509569875682&amp;cacheVersion=1&amp;api=v2&amp;width=598&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.48.42%20PM.png?version=1&amp;modificationDate=1509569875682&amp;cacheVersion=1&amp;api=v2&amp;width=299&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_18-15-32.png?version=1&amp;modificationDate=1509569875948&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_18-15-32.png" data-linked-resource-id="5963903" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="f0f818a0-a9f8-49d5-96ef-39d7fff19022" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_18-15-32.png?version=1&amp;modificationDate=1509569875948&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_18-15-32.png?version=1&amp;modificationDate=1509569875948&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_18-15-32.png?version=1&amp;modificationDate=1509569875948&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Reskin</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">Brandify moving to Yext</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>Lists (Shopping + Couponing)</p>
+					</td>
+					<td class="confluenceTd">Shopping lists + coupons aggregated from&nbsp;J4U Loyalty offers + Weekly Circular coupons&nbsp;</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>A customer will interact with a "list" experience which displays all the j4U offers/coupons/ads a customer has clipped using the "add to in-store shopping list" feature.</li>
+							<li>A customer can filter their list of offers by category, most recent, expiring, and by aisle.&nbsp;</li>
+							<li>A customer can view<span style="color: rgb(0,0,0);">&nbsp;a "total savings" summary content block that takes all the "added"/"clipped" coupons in their list and reminds the customer how much they've saved.</span></li>
+							<li><span style="color: rgb(0,0,0);">A customer can convert their in-store list to a delivery list with an "add to delivery / store pick up order" feature.&nbsp;</span></li>
+							<li><span style="color: rgb(0,0,0);">Customers can share their list to others using email.&nbsp;</span></li>
+							<li>Customers can create their own shopping list, then sort it by store aisle for faster shopping.</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li><strong><span style="color: rgb(255,0,0);">Can we auto-add the clipped / added offers directly into an in-store basket vs requiring customer to "check into instore basket"?&nbsp;</span></strong></li>
+							<li><strong><span style="color: rgb(255,0,0);">Can we display a "total savings" summary content block that takes all the "added"/"clipped" coupons and reminds the customer how much they've saved?</span></strong></li>
+							<li><strong><span style="color: rgb(255,0,0);">Can we add quick starter lists&nbsp; (italian, salads, soups, etc).&nbsp;</span></strong></li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.51.59%20PM.png?version=1&amp;modificationDate=1509569876216&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.51.59 PM.png" data-linked-resource-id="5963907" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="120c2a7b-e355-4e73-be9e-0d8ce4a1ad2b" data-media-type="file" data-unresolved-comment-count="0" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.51.59%20PM.png?version=1&amp;modificationDate=1509569876216&amp;cacheVersion=1&amp;api=v2&amp;width=300&amp;height=215" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.51.59%20PM.png?version=1&amp;modificationDate=1509569876216&amp;cacheVersion=1&amp;api=v2&amp;width=600&amp;height=430 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.51.59%20PM.png?version=1&amp;modificationDate=1509569876216&amp;cacheVersion=1&amp;api=v2&amp;width=300&amp;height=215 1x" width="300"></span></p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_18-33-31.png?version=1&amp;modificationDate=1509569876478&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_18-33-31.png" data-linked-resource-id="5963911" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="b98fc24b-95e4-4318-9f6d-d4cd0452faa4" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_18-33-31.png?version=1&amp;modificationDate=1509569876478&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_18-33-31.png?version=1&amp;modificationDate=1509569876478&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_18-33-31.png?version=1&amp;modificationDate=1509569876478&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span>
+							<p><br></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Complete Redesign</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">?</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>Enhanced Landing Pages&nbsp;</p>
+					</td>
+					<td class="confluenceTd">
+						<p>CPG - sponsored campaign landing pages. Critical CPG revenue attached here.</p>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Customers can explore CPG-sponsored offers through landing pages which allow customers to add offers &amp; items directly into an in-store list or delivery shopping cart.&nbsp;</li>
+							<li>Customers can browse CPG sponsored content by clicking on CPG-banners which will be integrated throughout the experience where relevant (ie category page for coffee &gt; display Starbucks banner &gt; link banner to Starbucks offers &amp; products).</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-17%20at%203.59.21%20PM.png?version=1&amp;modificationDate=1509569876737&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-17 at 3.59.21 PM.png" data-linked-resource-id="5963915" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="759e48bd-2f06-4000-af2e-e7a1197154bc" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-17%20at%203.59.21%20PM.png?version=1&amp;modificationDate=1509569876737&amp;cacheVersion=1&amp;api=v2&amp;width=317&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-17%20at%203.59.21%20PM.png?version=1&amp;modificationDate=1509569876737&amp;cacheVersion=1&amp;api=v2&amp;width=634&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-17%20at%203.59.21%20PM.png?version=1&amp;modificationDate=1509569876737&amp;cacheVersion=1&amp;api=v2&amp;width=317&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-23%20at%2010.39.44%20AM.png?version=1&amp;modificationDate=1509569877012&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-23 at 10.39.44 AM.png" data-linked-resource-id="5963919" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="6c3af82e-3c3c-4710-97df-d60632e548f1" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-23%20at%2010.39.44%20AM.png?version=1&amp;modificationDate=1509569877012&amp;cacheVersion=1&amp;api=v2&amp;width=356&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-23%20at%2010.39.44%20AM.png?version=1&amp;modificationDate=1509569877012&amp;cacheVersion=1&amp;api=v2&amp;width=712&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-23%20at%2010.39.44%20AM.png?version=1&amp;modificationDate=1509569877012&amp;cacheVersion=1&amp;api=v2&amp;width=356&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-13-44.png?version=1&amp;modificationDate=1509569877361&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-13-44.png" data-linked-resource-id="5963923" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="d813ddac-89cc-47d2-8ccc-b4a441a85176" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-13-44.png?version=1&amp;modificationDate=1509569877361&amp;cacheVersion=1&amp;api=v2&amp;width=142&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-13-44.png?version=1&amp;modificationDate=1509569877361&amp;cacheVersion=1&amp;api=v2&amp;width=284&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-13-44.png?version=1&amp;modificationDate=1509569877361&amp;cacheVersion=1&amp;api=v2&amp;width=142&amp;height=250 1x"></span></td>
+					<td class="confluenceTd" colspan="1">Complete Redesign</td>
+					<td class="confluenceTd" colspan="1">Nice</td>
+					<td class="confluenceTd" colspan="1">MWG powered but needs to move to AEM.</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>Account / Profile</p>
+					</td>
+					<td class="confluenceTd">
+						<p>Consolidated ecommerce &amp; loyalty Profile management incl. email, phone number and password reset.&nbsp;</p>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul style="margin-left: 0.0px;">
+							<li>A customer shall access their profile/account by selecting this feature in the main header/footer of the experience using basic email &amp; pw to access.&nbsp;</li>
+							<li>A customer will access their account&nbsp;which displays user-populated fields if data exists for easy updateing:&nbsp;
+								<ul>
+									<li>Phone Number (checkout identifier)</li>
+									<li>Password reset</li>
+									<li>Active &amp; Inactive Subscriptions</li>
+									<li>Security Settings (ie. security questions)</li>
+									<li>Payment (grocery delivery only)</li>
+									<li>Address (billing &amp; shipping)</li>
+									<li>Track my order</li>
+								</ul>
+							</li>
+							<li>If a customer is logged in to my Account &amp; a j4U/loyalty member, they will see a dashboard which displays critical loyalty information. See Integrated loyalty Dashboard requirements for more info.</li>
+						</ul>
+						<p><br></p>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<p>Note: "my list" on desktop actually includes loyalty dashboard vs. all within "My Account"</p>
+						<p><br></p>
+						<p>What would it take to enable "track my order?"</p>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.54.13%20PM.png?version=1&amp;modificationDate=1509569877685&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.54.13 PM.png" data-linked-resource-id="5963927" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="c6c07e18-854d-4244-85af-97ba272950c3" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.54.13%20PM.png?version=1&amp;modificationDate=1509569877685&amp;cacheVersion=1&amp;api=v2&amp;width=236&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.54.13%20PM.png?version=1&amp;modificationDate=1509569877685&amp;cacheVersion=1&amp;api=v2&amp;width=472&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.54.13%20PM.png?version=1&amp;modificationDate=1509569877685&amp;cacheVersion=1&amp;api=v2&amp;width=236&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-17%20at%203.20.28%20PM.png?version=1&amp;modificationDate=1509569877928&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-17 at 3.20.28 PM.png" data-linked-resource-id="5963931" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="ef456b70-e144-465c-8fde-35e44daea84a" data-media-type="file" data-unresolved-comment-count="0" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-17%20at%203.20.28%20PM.png?version=1&amp;modificationDate=1509569877928&amp;cacheVersion=1&amp;api=v2&amp;width=236&amp;height=213" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-17%20at%203.20.28%20PM.png?version=1&amp;modificationDate=1509569877928&amp;cacheVersion=1&amp;api=v2&amp;width=472&amp;height=426 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-17%20at%203.20.28%20PM.png?version=1&amp;modificationDate=1509569877928&amp;cacheVersion=1&amp;api=v2&amp;width=236&amp;height=213 1x" width="236"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_18-44-40.png?version=1&amp;modificationDate=1509569878213&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_18-44-40.png" data-linked-resource-id="5963935" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="b330d818-228c-489c-87f4-0ba7f3c8d446" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_18-44-40.png?version=1&amp;modificationDate=1509569878213&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_18-44-40.png?version=1&amp;modificationDate=1509569878213&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_18-44-40.png?version=1&amp;modificationDate=1509569878213&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Complete Redesign</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">Champ + Copient + OKTA + Terradata</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>Customer Service</p>
+					</td>
+					<td class="confluenceTd">Contact customer service</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>A customer can get into contact w/ the Banner customer service team using email, online forms, and calling us.&nbsp;</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Brianca&nbsp;</li>
+							<li>what's the status of eCHO?</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%204.20.59%20PM.png?version=1&amp;modificationDate=1509569878482&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 4.20.59 PM.png" data-linked-resource-id="5963939" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="d43d6b75-c172-4227-b060-d55c1d93f58e" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%204.20.59%20PM.png?version=1&amp;modificationDate=1509569878482&amp;cacheVersion=1&amp;api=v2&amp;width=500&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%204.20.59%20PM.png?version=1&amp;modificationDate=1509569878482&amp;cacheVersion=1&amp;api=v2&amp;width=948&amp;height=474 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%204.20.59%20PM.png?version=1&amp;modificationDate=1509569878482&amp;cacheVersion=1&amp;api=v2&amp;width=500&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Reskin</td>
+					<td class="confluenceTd" colspan="1">Nice</td>
+					<td class="confluenceTd" colspan="1">CCA</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>Search</p>
+					</td>
+					<td class="confluenceTd">Search ecommerce experience for product content and search j4u/coupons for offers/deals. This is a separate function based on the customer view (ie not a completely integrated search appliance that searches product &amp; offers all in one).&nbsp;</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>A customer can search for products using keyword search ie "Peet's Coffee" which will display type ahead results as the user types "Peet" &gt; display "Peet's Coffee" for faster search.</li>
+							<li>A customer can search for products using major categories (ie. produce, meat, etc).&nbsp;</li>
+							<li>A customer can search for products using barcode UPC (mobile only)</li>
+							<li><span style="color: rgb(0,0,0);">A customers search results may include a combination of products available for delivery/store pickup + offers associated with the products.</span></li>
+							<li><span style="color: rgb(0,0,0);">A customer can filter search results based on coupons/offers&nbsp;Ie search for Peet's Coffee &gt; see Peet's Coffee K Cups for Delivery + filter against offers/coupons for Peet's coffee all in a single search results view.&nbsp;&nbsp;</span></li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>pull out coupon search for r1</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><strong><span style="color: rgb(255,0,0);"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%204.00.46%20PM.png?version=1&amp;modificationDate=1509569878824&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 4.00.46 PM.png" data-linked-resource-id="5963943" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="6c3a3a56-a1cd-40e9-b65c-46620de521e2" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%204.00.46%20PM.png?version=1&amp;modificationDate=1509569878824&amp;cacheVersion=1&amp;api=v2&amp;width=268&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%204.00.46%20PM.png?version=1&amp;modificationDate=1509569878824&amp;cacheVersion=1&amp;api=v2&amp;width=536&amp;height=300 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%204.00.46%20PM.png?version=1&amp;modificationDate=1509569878824&amp;cacheVersion=1&amp;api=v2&amp;width=268&amp;height=150 1x"></span></span></strong></p>
+							<p><strong><span style="color: rgb(255,0,0);"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-18%20at%206.04.24%20PM.png?version=1&amp;modificationDate=1509569879100&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-18 at 6.04.24 PM.png" data-linked-resource-id="5963947" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="3b712d90-9afd-491b-a307-00eee693f1a9" data-media-type="file" data-unresolved-comment-count="0" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-18%20at%206.04.24%20PM.png?version=1&amp;modificationDate=1509569879100&amp;cacheVersion=1&amp;api=v2&amp;width=300&amp;height=62" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-18%20at%206.04.24%20PM.png?version=1&amp;modificationDate=1509569879100&amp;cacheVersion=1&amp;api=v2&amp;width=600&amp;height=124 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-18%20at%206.04.24%20PM.png?version=1&amp;modificationDate=1509569879100&amp;cacheVersion=1&amp;api=v2&amp;width=300&amp;height=62 1x" width="300"></span></span></strong></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-15-58.png?version=1&amp;modificationDate=1509569879360&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-15-58.png" data-linked-resource-id="5963951" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="90cf362c-2c8e-43b8-bc77-d2454919dca2" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-15-58.png?version=1&amp;modificationDate=1509569879360&amp;cacheVersion=1&amp;api=v2&amp;width=88&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-15-58.png?version=1&amp;modificationDate=1509569879360&amp;cacheVersion=1&amp;api=v2&amp;width=176&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-15-58.png?version=1&amp;modificationDate=1509569879360&amp;cacheVersion=1&amp;api=v2&amp;width=88&amp;height=250 1x"></span></p>
+							<p><br></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-16-11.png?version=1&amp;modificationDate=1509569879599&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-16-11.png" data-linked-resource-id="5963955" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="da95fbe2-43fd-467a-adc5-64f06ad6a26c" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-16-11.png?version=1&amp;modificationDate=1509569879599&amp;cacheVersion=1&amp;api=v2&amp;width=134&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-16-11.png?version=1&amp;modificationDate=1509569879599&amp;cacheVersion=1&amp;api=v2&amp;width=268&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-16-11.png?version=1&amp;modificationDate=1509569879599&amp;cacheVersion=1&amp;api=v2&amp;width=134&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">Complete Redesign</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">
+						<a class="external-link" href="http://constructor.io" rel="nofollow">constructor.io</a> for nebula
+					</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>Navigation System / Filtering</p>
+					</td>
+					<td class="confluenceTd">
+						<ul>
+							<li>Product Category &amp; Filtering System</li>
+							<li>Faceted Navigation</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						A customer can filter any given product search results list by:&nbsp;
+						<ul>
+							<li>Alphabetical (A to Z)</li>
+							<li>Relevance / Most Popular</li>
+							<li>Specials (tie into loyalty ie club card special / j4u pricing)</li>
+							<li>Price (High to Low)</li>
+							<li>Quantity</li>
+							<li>Brand</li>
+							<li>Speciality (Vegan, Kosher, Gluten Free, etc.)</li>
+							<li>Certifications (Organic)</li>
+						</ul>&nbsp;
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Use out of box websphere commerce catalogue and simple vs. comprehensive filtering.</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%204.19.59%20PM.png?version=1&amp;modificationDate=1509569879864&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 4.19.59 PM.png" data-linked-resource-id="5963959" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="0a524c31-f0e0-429f-87c9-92fa9b23dc38" data-media-type="file" data-unresolved-comment-count="0" src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%204.19.59%20PM.png?version=1&amp;modificationDate=1509569879864&amp;cacheVersion=1&amp;api=v2"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-8-54.png?version=1&amp;modificationDate=1509569880130&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-8-54.png" data-linked-resource-id="5963963" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="581996bf-63db-42f9-a0c4-60fa10c9166b" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-8-54.png?version=1&amp;modificationDate=1509569880130&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-8-54.png?version=1&amp;modificationDate=1509569880130&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-8-54.png?version=1&amp;modificationDate=1509569880130&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-16-33.png?version=1&amp;modificationDate=1509569880453&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-16-33.png" data-linked-resource-id="5963967" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="f7061a77-96ab-420e-b726-c9a8285b0601" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-16-33.png?version=1&amp;modificationDate=1509569880453&amp;cacheVersion=1&amp;api=v2&amp;width=134&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-16-33.png?version=1&amp;modificationDate=1509569880453&amp;cacheVersion=1&amp;api=v2&amp;width=268&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-16-33.png?version=1&amp;modificationDate=1509569880453&amp;cacheVersion=1&amp;api=v2&amp;width=134&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">Complete Redesign</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">.Net + OSO1 catalogue</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>PDP</p>
+					</td>
+					<td class="confluenceTd">Product detail page</td>
+					<td class="confluenceTd" colspan="1">
+						A customer can get further information on a given product we sell in store-online on a Product Detail Page which includes:&nbsp;&nbsp;
+						<ul>
+							<li>Product titles</li>
+							<li>Product info</li>
+							<li>Product SEO content</li>
+							<li>Pricing (all-in i.e. j4u/club pricing)</li>
+							<li>Request to your personal shopper ie substitutions</li>
+							<li>Nutritional Info</li>
+							<li>Product Imagery, multiple images etc. etc.</li>
+							<li>Add couponing directly within PDP (if I'm on a Peets coffee product page = give me the associated Peet's coupon available)</li>
+						</ul>
+						<p>A customer can select "pick it up from store" or "delivery" against every item in the catalog.&nbsp;</p>
+						<p>A customer can explore "you may also like" content which appears below the product page for consideration.</p>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><br></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.19.34%20PM.png?version=1&amp;modificationDate=1509569880720&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.19.34 PM.png" data-linked-resource-id="5963971" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="d3b13395-a635-4709-b10d-3549ea5088b6" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.19.34%20PM.png?version=1&amp;modificationDate=1509569880720&amp;cacheVersion=1&amp;api=v2&amp;width=270&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.19.34%20PM.png?version=1&amp;modificationDate=1509569880720&amp;cacheVersion=1&amp;api=v2&amp;width=540&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.19.34%20PM.png?version=1&amp;modificationDate=1509569880720&amp;cacheVersion=1&amp;api=v2&amp;width=270&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-23-44.png?version=1&amp;modificationDate=1509569880982&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-23-44.png" data-linked-resource-id="5963975" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="a2619f78-e964-4748-a30c-00924b37a74c" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-23-44.png?version=1&amp;modificationDate=1509569880982&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-23-44.png?version=1&amp;modificationDate=1509569880982&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-23-44.png?version=1&amp;modificationDate=1509569880982&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+							<p><br></p>
+							<p>See home depot:</p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-24%20at%201.23.37%20PM.png?version=1&amp;modificationDate=1509569881286&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-24 at 1.23.37 PM.png" data-linked-resource-id="5963979" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="595016b1-e77e-494c-adfe-51bc8606bb9a" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-24%20at%201.23.37%20PM.png?version=1&amp;modificationDate=1509569881286&amp;cacheVersion=1&amp;api=v2&amp;width=725&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-24%20at%201.23.37%20PM.png?version=1&amp;modificationDate=1509569881286&amp;cacheVersion=1&amp;api=v2&amp;width=1450&amp;height=300 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-24%20at%201.23.37%20PM.png?version=1&amp;modificationDate=1509569881286&amp;cacheVersion=1&amp;api=v2&amp;width=725&amp;height=150 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-16-56.png?version=1&amp;modificationDate=1509569881533&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-16-56.png" data-linked-resource-id="5963983" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="5c5eca15-5074-478e-a102-741f2401485b" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-16-56.png?version=1&amp;modificationDate=1509569881533&amp;cacheVersion=1&amp;api=v2&amp;width=76&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-16-56.png?version=1&amp;modificationDate=1509569881533&amp;cacheVersion=1&amp;api=v2&amp;width=152&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-16-56.png?version=1&amp;modificationDate=1509569881533&amp;cacheVersion=1&amp;api=v2&amp;width=76&amp;height=250 1x"></span></p>
+						<p><br></p>
+						<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-17-12.png?version=1&amp;modificationDate=1509569881833&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-17-12.png" data-linked-resource-id="5963987" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="14b06843-d92c-4b2f-8995-e4b106ab0268" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-17-12.png?version=1&amp;modificationDate=1509569881833&amp;cacheVersion=1&amp;api=v2&amp;width=143&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-17-12.png?version=1&amp;modificationDate=1509569881833&amp;cacheVersion=1&amp;api=v2&amp;width=286&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-17-12.png?version=1&amp;modificationDate=1509569881833&amp;cacheVersion=1&amp;api=v2&amp;width=143&amp;height=250 1x"></span></p>
+					</td>
+					<td class="confluenceTd" colspan="1">Complete Redesign</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">Websphere + AEM</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>How do you want to shop (for delivery)</p>
+					</td>
+					<td class="confluenceTd">Begin delivery order by history, category, Shop by Aisle, Shop by Recipe&nbsp;</td>
+					<td class="confluenceTd" colspan="1">
+						<p>A customer interested in grocery delivery or in store pick up (DUG) will walk through a series of prompted UI elements to help them easily build their order including:&nbsp;</p>
+						<ul>
+							<li>Pick a Store, then pick a time</li>
+							<li>Search my history &amp; add to cart</li>
+							<li>Pick a Store then Search by category or Aisle&nbsp;&amp; add to cart</li>
+							<li>Pick a Store then Search by recipe &amp; add to cart</li>
+							<li>Choose your substitution preferences&nbsp;</li>
+						</ul>
+						<p><br></p>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Apparently we now have in store purchases pulled in to UI&nbsp;– how do we display that?</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.56.40%20PM.png?version=1&amp;modificationDate=1509569882100&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.56.40 PM.png" data-linked-resource-id="5963991" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="af2adf8a-9065-43bb-babc-696a6a7befe0" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.56.40%20PM.png?version=1&amp;modificationDate=1509569882100&amp;cacheVersion=1&amp;api=v2&amp;width=378&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.56.40%20PM.png?version=1&amp;modificationDate=1509569882100&amp;cacheVersion=1&amp;api=v2&amp;width=756&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.56.40%20PM.png?version=1&amp;modificationDate=1509569882100&amp;cacheVersion=1&amp;api=v2&amp;width=378&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-20-56.png?version=1&amp;modificationDate=1509569882366&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-20-56.png" data-linked-resource-id="5963995" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="92d42986-1790-4085-b850-7cc537f493b9" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-20-56.png?version=1&amp;modificationDate=1509569882366&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-20-56.png?version=1&amp;modificationDate=1509569882366&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-20-56.png?version=1&amp;modificationDate=1509569882366&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Complete Redesign&nbsp;</td>
+					<td class="confluenceTd" colspan="1">Must&nbsp;</td>
+					<td class="confluenceTd" colspan="1">Websphere + AEM</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>Merchandising Widgets + AD Network</p>
+					</td>
+					<td class="confluenceTd">Promotional widgets/modules&nbsp;</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>A business user can simply update content blocks for sponsored CPG partners to advertise in certain areas of the digital experience.&nbsp;</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">Moving from MWG to Quotient including integration w/ ad network</td>
+					<td class="confluenceTd" colspan="1"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.57.34%20PM.png?version=1&amp;modificationDate=1509569882656&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.57.34 PM.png" data-linked-resource-id="5963999" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="48841764-0a5f-4a82-ae52-6b642a894c7c" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.57.34%20PM.png?version=1&amp;modificationDate=1509569882656&amp;cacheVersion=1&amp;api=v2&amp;width=316&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.57.34%20PM.png?version=1&amp;modificationDate=1509569882656&amp;cacheVersion=1&amp;api=v2&amp;width=582&amp;height=276 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.57.34%20PM.png?version=1&amp;modificationDate=1509569882656&amp;cacheVersion=1&amp;api=v2&amp;width=316&amp;height=150 1x"></span></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Just Reskin</td>
+					<td class="confluenceTd" colspan="1">Nice</td>
+					<td class="confluenceTd" colspan="1">From MWG To Websphere + AEM</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">
+						<p>Cart + Checkout</p>
+					</td>
+					<td class="confluenceTd">
+						<p>Mini Cart, Shopping Cart, &amp; Checkout</p>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul style="margin-left: 0.0px;">
+							<li>A customer will see a mini cart which displays a preview of their shopping cart including subtotal, items preview, and their spend against free shipping (ie spend $5 more then shipping is on us).&nbsp;&nbsp;</li>
+							<li>The customer checkout flow should include:&nbsp;
+								<ul>
+									<li>Delivery Method (attended or unattended)</li>
+									<li>Select your delivery time with discounted slots ($ savings)</li>
+									<li>
+										<p>Applicable Offers/Coupons from a customers list</p>
+									</li>
+									<li>Promo Code including auto-apply</li>
+									<li>Substitutions (defaults and alternatives)</li>
+									<li>Order Info</li>
+									<li>Payment</li>
+									<li>Pricing Break out (incl. taxes)</li>
+								</ul>
+							</li>
+							<li>A returning customer can use an "express" checkout experience which takes saved methods of payment, addresses etc and reduces the checkout steps for faster checkout.&nbsp;&nbsp;</li>
+							<li>A customer should be able to easily add or remove products in the shopping cart</li>
+							<li>A customer should visually feel like the checkout experience is a secure process for ease of shopping.&nbsp;</li>
+							<li>A customer should easily see their applicable offers/coupons savings from their "my list" feature as a clear line item in the shopping basket &amp; Checkout $ total.&nbsp;</li>
+							<li>A customer should have limited distractions in the checkout flow (ie remove uncessary header/footer features) to keep them focused on completing checkout.&nbsp;</li>
+							<li>A customer should receive an order confirmation page with relevant tracking information post-purchase.</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Look at nebula UI</li>
+							<li>Apply out of box Websphere Commerice</li>
+							<li>Propose we remove the double PW confirm</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%204.21.32%20PM.png?version=1&amp;modificationDate=1509569882930&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 4.21.32 PM.png" data-linked-resource-id="5964003" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="612d6304-28ce-4cff-b1a6-5525e672c3c2" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%204.21.32%20PM.png?version=1&amp;modificationDate=1509569882930&amp;cacheVersion=1&amp;api=v2&amp;width=361&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%204.21.32%20PM.png?version=1&amp;modificationDate=1509569882930&amp;cacheVersion=1&amp;api=v2&amp;width=582&amp;height=403 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%204.21.32%20PM.png?version=1&amp;modificationDate=1509569882930&amp;cacheVersion=1&amp;api=v2&amp;width=361&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-27-12.png?version=1&amp;modificationDate=1509569883244&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-27-12.png" data-linked-resource-id="5964007" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="75e8afe3-8f39-4d69-9d30-512b1353f254" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-27-12.png?version=1&amp;modificationDate=1509569883244&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-27-12.png?version=1&amp;modificationDate=1509569883244&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-27-12.png?version=1&amp;modificationDate=1509569883244&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-28-38.png?version=1&amp;modificationDate=1509569883503&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-28-38.png" data-linked-resource-id="5964011" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="e0a43ca6-e26a-4c50-b10a-e586de8be093" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-28-38.png?version=1&amp;modificationDate=1509569883503&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-28-38.png?version=1&amp;modificationDate=1509569883503&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-28-38.png?version=1&amp;modificationDate=1509569883503&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-31-15.png?version=1&amp;modificationDate=1509569883784&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-31-15.png" data-linked-resource-id="5964015" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="9c5b1d21-aa6c-41f8-9c95-29128925d39c" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-31-15.png?version=1&amp;modificationDate=1509569883784&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-31-15.png?version=1&amp;modificationDate=1509569883784&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-31-15.png?version=1&amp;modificationDate=1509569883784&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-40-28.png?version=1&amp;modificationDate=1509569884094&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-40-28.png" data-linked-resource-id="5964019" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="f5f326b9-13ce-4128-b757-480ce4e7cfc3" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-40-28.png?version=1&amp;modificationDate=1509569884094&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-40-28.png?version=1&amp;modificationDate=1509569884094&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-40-28.png?version=1&amp;modificationDate=1509569884094&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-31-23.png?version=1&amp;modificationDate=1509569884389&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-31-23.png" data-linked-resource-id="5964023" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="808b678a-2c33-4a32-870e-87309cfe69e3" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-31-23.png?version=1&amp;modificationDate=1509569884389&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-31-23.png?version=1&amp;modificationDate=1509569884389&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-31-23.png?version=1&amp;modificationDate=1509569884389&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-42-51.png?version=1&amp;modificationDate=1509569884651&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-42-51.png" data-linked-resource-id="5964027" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="0ba9cd51-6ae2-4f64-b635-d602e32e96ed" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-42-51.png?version=1&amp;modificationDate=1509569884651&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-42-51.png?version=1&amp;modificationDate=1509569884651&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-42-51.png?version=1&amp;modificationDate=1509569884651&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-42-7.png?version=1&amp;modificationDate=1509569884922&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-42-7.png" data-linked-resource-id="5964031" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="557700a3-62ee-4f96-b030-9757ea396266" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-42-7.png?version=1&amp;modificationDate=1509569884922&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-42-7.png?version=1&amp;modificationDate=1509569884922&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-42-7.png?version=1&amp;modificationDate=1509569884922&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-43-8.png?version=1&amp;modificationDate=1509569885247&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-43-8.png" data-linked-resource-id="5964035" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="741394e7-15c4-4b06-9ce4-0c25974f5b59" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-43-8.png?version=1&amp;modificationDate=1509569885247&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-43-8.png?version=1&amp;modificationDate=1509569885247&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-43-8.png?version=1&amp;modificationDate=1509569885247&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_19-43-24.png?version=1&amp;modificationDate=1509569885656&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_19-43-24.png" data-linked-resource-id="5964039" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="1576cda2-27c6-4535-af28-dbfffdb9ab7c" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_19-43-24.png?version=1&amp;modificationDate=1509569885656&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_19-43-24.png?version=1&amp;modificationDate=1509569885656&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_19-43-24.png?version=1&amp;modificationDate=1509569885656&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-17-34.png?version=1&amp;modificationDate=1509569885924&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-17-34.png" data-linked-resource-id="5964043" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="d764b2f4-232d-414f-980a-2854c9e378d2" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-17-34.png?version=1&amp;modificationDate=1509569885924&amp;cacheVersion=1&amp;api=v2&amp;width=121&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-17-34.png?version=1&amp;modificationDate=1509569885924&amp;cacheVersion=1&amp;api=v2&amp;width=242&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-17-34.png?version=1&amp;modificationDate=1509569885924&amp;cacheVersion=1&amp;api=v2&amp;width=121&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-17-54.png?version=1&amp;modificationDate=1509569886200&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-17-54.png" data-linked-resource-id="5964047" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="17e2d7f4-e69c-4b38-9f38-8300a802fc89" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-17-54.png?version=1&amp;modificationDate=1509569886200&amp;cacheVersion=1&amp;api=v2&amp;width=115&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-17-54.png?version=1&amp;modificationDate=1509569886200&amp;cacheVersion=1&amp;api=v2&amp;width=230&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-17-54.png?version=1&amp;modificationDate=1509569886200&amp;cacheVersion=1&amp;api=v2&amp;width=115&amp;height=250 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-26%20at%209.43.55%20AM.png?version=1&amp;modificationDate=1509569886451&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-26 at 9.43.55 AM.png" data-linked-resource-id="5964051" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="6f737d92-58e6-49f1-be5e-3565ac5a00d3" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.43.55%20AM.png?version=1&amp;modificationDate=1509569886451&amp;cacheVersion=1&amp;api=v2&amp;width=232&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.43.55%20AM.png?version=1&amp;modificationDate=1509569886451&amp;cacheVersion=1&amp;api=v2&amp;width=464&amp;height=300 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.43.55%20AM.png?version=1&amp;modificationDate=1509569886451&amp;cacheVersion=1&amp;api=v2&amp;width=232&amp;height=150 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-26%20at%209.44.56%20AM.png?version=1&amp;modificationDate=1509569886720&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-26 at 9.44.56 AM.png" data-linked-resource-id="5964055" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="9f9acfea-288e-442b-8e9c-0d5bf9e0b4c1" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.44.56%20AM.png?version=1&amp;modificationDate=1509569886720&amp;cacheVersion=1&amp;api=v2&amp;width=225&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.44.56%20AM.png?version=1&amp;modificationDate=1509569886720&amp;cacheVersion=1&amp;api=v2&amp;width=450&amp;height=300 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.44.56%20AM.png?version=1&amp;modificationDate=1509569886720&amp;cacheVersion=1&amp;api=v2&amp;width=225&amp;height=150 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-26%20at%209.47.16%20AM.png?version=1&amp;modificationDate=1509569887000&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-26 at 9.47.16 AM.png" data-linked-resource-id="5964059" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="9d484f55-201b-4244-bd87-7651a53f65f0" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.47.16%20AM.png?version=1&amp;modificationDate=1509569887000&amp;cacheVersion=1&amp;api=v2&amp;width=243&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.47.16%20AM.png?version=1&amp;modificationDate=1509569887000&amp;cacheVersion=1&amp;api=v2&amp;width=486&amp;height=300 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.47.16%20AM.png?version=1&amp;modificationDate=1509569887000&amp;cacheVersion=1&amp;api=v2&amp;width=243&amp;height=150 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-26%20at%209.48.11%20AM.png?version=1&amp;modificationDate=1509569887278&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-26 at 9.48.11 AM.png" data-linked-resource-id="5964063" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="180d09e9-74a6-49eb-bd3f-2e2ee0acb6f5" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.48.11%20AM.png?version=1&amp;modificationDate=1509569887278&amp;cacheVersion=1&amp;api=v2&amp;width=277&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.48.11%20AM.png?version=1&amp;modificationDate=1509569887278&amp;cacheVersion=1&amp;api=v2&amp;width=554&amp;height=300 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.48.11%20AM.png?version=1&amp;modificationDate=1509569887278&amp;cacheVersion=1&amp;api=v2&amp;width=277&amp;height=150 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-26%20at%209.48.55%20AM.png?version=1&amp;modificationDate=1509569887540&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-26 at 9.48.55 AM.png" data-linked-resource-id="5964067" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="265f7056-15f9-4485-ac80-0d2a4b011005" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.48.55%20AM.png?version=1&amp;modificationDate=1509569887540&amp;cacheVersion=1&amp;api=v2&amp;width=239&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.48.55%20AM.png?version=1&amp;modificationDate=1509569887540&amp;cacheVersion=1&amp;api=v2&amp;width=478&amp;height=300 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.48.55%20AM.png?version=1&amp;modificationDate=1509569887540&amp;cacheVersion=1&amp;api=v2&amp;width=239&amp;height=150 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-26%20at%209.49.56%20AM.png?version=1&amp;modificationDate=1509569887800&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-26 at 9.49.56 AM.png" data-linked-resource-id="5964071" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="94d7c96d-351d-4e52-9463-8d42e9a828d1" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.49.56%20AM.png?version=1&amp;modificationDate=1509569887800&amp;cacheVersion=1&amp;api=v2&amp;width=322&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.49.56%20AM.png?version=1&amp;modificationDate=1509569887800&amp;cacheVersion=1&amp;api=v2&amp;width=644&amp;height=300 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.49.56%20AM.png?version=1&amp;modificationDate=1509569887800&amp;cacheVersion=1&amp;api=v2&amp;width=322&amp;height=150 1x"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-26%20at%209.50.40%20AM.png?version=1&amp;modificationDate=1509569888054&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-26 at 9.50.40 AM.png" data-linked-resource-id="5964075" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="aa274018-6ed1-42be-a58d-fe8ed169b3ae" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.50.40%20AM.png?version=1&amp;modificationDate=1509569888054&amp;cacheVersion=1&amp;api=v2&amp;width=236&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.50.40%20AM.png?version=1&amp;modificationDate=1509569888054&amp;cacheVersion=1&amp;api=v2&amp;width=472&amp;height=300 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-26%20at%209.50.40%20AM.png?version=1&amp;modificationDate=1509569888054&amp;cacheVersion=1&amp;api=v2&amp;width=236&amp;height=150 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">Redesign</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">Websphere + AEM</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Product Scanning&nbsp;</td>
+					<td class="confluenceTd" colspan="1">Product scan for search &amp; offers (ie coupons)</td>
+					<td class="confluenceTd" colspan="1">A mobile customer can use product scanning to search for Offers/Coupons and or products for delivery for faster search.&nbsp;</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-16_19-59-26.png?version=1&amp;modificationDate=1509569888326&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-16_19-59-26.png" data-linked-resource-id="5964079" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="94b7d336-43ec-48c5-ba20-ff7b659486b0" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-16_19-59-26.png?version=1&amp;modificationDate=1509569888326&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-16_19-59-26.png?version=1&amp;modificationDate=1509569888326&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-16_19-59-26.png?version=1&amp;modificationDate=1509569888326&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<p><br></p>
+						<p><br></p>
+					</td>
+					<td class="confluenceTd" colspan="1">Just Reskin</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">?</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Geotargeting</td>
+					<td class="confluenceTd" colspan="1">Location detection &amp; associated nearby stores</td>
+					<td class="confluenceTd" colspan="1">A new customer shall be greeted with a "where is your local store" prompt which allows the customer to select from their current location or manually enter a zip/city to find their home store. The pricing and offers will be reflected against this selection.&nbsp;</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%208.33.36%20PM.png?version=1&amp;modificationDate=1509569888576&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 8.33.36 PM.png" data-linked-resource-id="5964083" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="2ad4ce3f-8704-4a6c-9f13-13f639a50be8" data-media-type="file" data-unresolved-comment-count="0" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.33.36%20PM.png?version=1&amp;modificationDate=1509569888576&amp;cacheVersion=1&amp;api=v2&amp;width=220&amp;height=29" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.33.36%20PM.png?version=1&amp;modificationDate=1509569888576&amp;cacheVersion=1&amp;api=v2&amp;width=440&amp;height=58 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.33.36%20PM.png?version=1&amp;modificationDate=1509569888576&amp;cacheVersion=1&amp;api=v2&amp;width=220&amp;height=29 1x" width="220"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Just Reskin</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">?</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Recipes</td>
+					<td class="confluenceTd" colspan="1">Recipe content for discovery &amp; ordering.</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Retain shop by recipe feature on delivery/DUG experience.&nbsp;</li>
+							<li>Retain recipe content pages on banner experience.&nbsp;</li>
+						</ul>
+						<p><br></p>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%208.34.49%20PM.png?version=1&amp;modificationDate=1509569888853&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 8.34.49 PM.png" data-linked-resource-id="5964087" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="396deb9f-c73f-454d-9c55-5120c7a3eb99" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.34.49%20PM.png?version=1&amp;modificationDate=1509569888853&amp;cacheVersion=1&amp;api=v2&amp;width=371&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.34.49%20PM.png?version=1&amp;modificationDate=1509569888853&amp;cacheVersion=1&amp;api=v2&amp;width=742&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.34.49%20PM.png?version=1&amp;modificationDate=1509569888853&amp;cacheVersion=1&amp;api=v2&amp;width=371&amp;height=250 1x"></span>&nbsp;<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-11-02%20at%2011.05.12%20AM.png?version=1&amp;modificationDate=1509645928252&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-11-02 at 11.05.12 AM.png" data-linked-resource-id="6455341" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="d44ec58b-a546-4462-bd87-cc04684aca6a" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-11-02%20at%2011.05.12%20AM.png?version=1&amp;modificationDate=1509645928252&amp;cacheVersion=1&amp;api=v2&amp;width=336&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-11-02%20at%2011.05.12%20AM.png?version=1&amp;modificationDate=1509645928252&amp;cacheVersion=1&amp;api=v2&amp;width=672&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-11-02%20at%2011.05.12%20AM.png?version=1&amp;modificationDate=1509645928252&amp;cacheVersion=1&amp;api=v2&amp;width=336&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-18-23.png?version=1&amp;modificationDate=1509569889101&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-18-23.png" data-linked-resource-id="5964091" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="596babf6-c8e6-4f21-8cbc-b3a6d4523a48" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-18-23.png?version=1&amp;modificationDate=1509569889101&amp;cacheVersion=1&amp;api=v2&amp;width=97&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-18-23.png?version=1&amp;modificationDate=1509569889101&amp;cacheVersion=1&amp;api=v2&amp;width=194&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-18-23.png?version=1&amp;modificationDate=1509569889101&amp;cacheVersion=1&amp;api=v2&amp;width=97&amp;height=250 1x"></span>&nbsp;<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-26_9-53-12.png?version=1&amp;modificationDate=1509569889397&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-26_9-53-12.png" data-linked-resource-id="5964095" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="827d5e6d-a4e3-4778-9099-1862189f746e" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-26_9-53-12.png?version=1&amp;modificationDate=1509569889397&amp;cacheVersion=1&amp;api=v2&amp;width=114&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-26_9-53-12.png?version=1&amp;modificationDate=1509569889397&amp;cacheVersion=1&amp;api=v2&amp;width=228&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-26_9-53-12.png?version=1&amp;modificationDate=1509569889397&amp;cacheVersion=1&amp;api=v2&amp;width=114&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1">Just Reskin</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">MWG</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">3rd Party Loyalty</td>
+					<td class="confluenceTd" colspan="1">Integration of 3<sup>rd</sup> party loyalty programs (i.e. Airline Miles, Box Tops)</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Should look into lyft/uber/spotify integration</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.55.50%20PM.png?version=1&amp;modificationDate=1509569889742&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.55.50 PM.png" data-linked-resource-id="5964099" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="bc4aeb6a-746d-4497-9d4c-f75a6fee4cc1" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.55.50%20PM.png?version=1&amp;modificationDate=1509569889742&amp;cacheVersion=1&amp;api=v2&amp;width=368&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.55.50%20PM.png?version=1&amp;modificationDate=1509569889742&amp;cacheVersion=1&amp;api=v2&amp;width=736&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.55.50%20PM.png?version=1&amp;modificationDate=1509569889742&amp;cacheVersion=1&amp;api=v2&amp;width=368&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Just Reskin</td>
+					<td class="confluenceTd" colspan="1">Nice</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">
+						<p>Integrated Rewards</p>
+					</td>
+					<td class="confluenceTd" colspan="1">Dashboard/Scorecard</td>
+					<td class="confluenceTd" colspan="1">
+						<p>If a customer is logged in to my Account &amp; a j4U/loyalty member, they will see a dashboard which displays critical loyalty information which combines Gas, Grocery Rewards, and J4U offers including points total, points till next reward, and active rewards/offers.</p>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>100 points = 1 reward&nbsp;</li>
+							<li>1 reward = .10 off gas OR grocery reward (in pilot)</li>
+							<li>All offers expire EOM</li>
+							<li>Lifetime savings total&nbsp;</li>
+							<li>Yearly savings total</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%203.50.18%20PM.png?version=1&amp;modificationDate=1509569890003&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 3.50.18 PM.png" data-linked-resource-id="5964103" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="8f13596c-3d99-45e2-9343-26151a025201" data-media-type="file" data-unresolved-comment-count="0" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.50.18%20PM.png?version=1&amp;modificationDate=1509569890003&amp;cacheVersion=1&amp;api=v2&amp;width=500&amp;height=93" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.50.18%20PM.png?version=1&amp;modificationDate=1509569890003&amp;cacheVersion=1&amp;api=v2&amp;width=773&amp;height=144 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%203.50.18%20PM.png?version=1&amp;modificationDate=1509569890003&amp;cacheVersion=1&amp;api=v2&amp;width=500&amp;height=93 1x" width="500"></span></p>
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_18-29-16.png?version=1&amp;modificationDate=1509569890416&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_18-29-16.png" data-linked-resource-id="5964107" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="bb2bb210-612a-4e33-9efe-92968fa9b97f" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_18-29-16.png?version=1&amp;modificationDate=1509569890416&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_18-29-16.png?version=1&amp;modificationDate=1509569890416&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_18-29-16.png?version=1&amp;modificationDate=1509569890416&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-10-18_18-44-40.png?version=1&amp;modificationDate=1509569878213&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-10-18_18-44-40.png" data-linked-resource-id="5963935" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="b330d818-228c-489c-87f4-0ba7f3c8d446" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-10-18_18-44-40.png?version=1&amp;modificationDate=1509569878213&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-10-18_18-44-40.png?version=1&amp;modificationDate=1509569878213&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=500 2x, /wiki/download/thumbnails/5996545/image2017-10-18_18-44-40.png?version=1&amp;modificationDate=1509569878213&amp;cacheVersion=1&amp;api=v2&amp;width=140&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/image2017-11-2_11-4-40.png?version=1&amp;modificationDate=1509645882296&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="image2017-11-2_11-4-40.png" data-linked-resource-id="6422560" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="a0aea4e2-4a0a-46b7-93f2-a0b2e7d6e48b" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/image2017-11-2_11-4-40.png?version=1&amp;modificationDate=1509645882296&amp;cacheVersion=1&amp;api=v2&amp;width=320&amp;height=250" srcset="/wiki/download/thumbnails/5996545/image2017-11-2_11-4-40.png?version=1&amp;modificationDate=1509645882296&amp;cacheVersion=1&amp;api=v2&amp;width=376&amp;height=293 2x, /wiki/download/thumbnails/5996545/image2017-11-2_11-4-40.png?version=1&amp;modificationDate=1509645882296&amp;cacheVersion=1&amp;api=v2&amp;width=320&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Complete Redesign</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1">Copient + Champ</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">SMS / Push Notifications</td>
+					<td class="confluenceTd" colspan="1">App &amp; Website</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Do we have web notifications today? If not, lets move to r2</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">NA</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Pharmacy</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Out of scope</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Will SSO include Pharmacy?</li>
+							<li>Out of Scope.&nbsp;</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-20%20at%208.26.07%20AM.png?version=1&amp;modificationDate=1509569890723&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-20 at 8.26.07 AM.png" data-linked-resource-id="5964111" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="c95a4e83-9c16-4911-89f2-8c0699d9d28b" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-20%20at%208.26.07%20AM.png?version=1&amp;modificationDate=1509569890723&amp;cacheVersion=1&amp;api=v2&amp;width=330&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-20%20at%208.26.07%20AM.png?version=1&amp;modificationDate=1509569890723&amp;cacheVersion=1&amp;api=v2&amp;width=660&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-20%20at%208.26.07%20AM.png?version=1&amp;modificationDate=1509569890723&amp;cacheVersion=1&amp;api=v2&amp;width=330&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Reskin&nbsp;</td>
+					<td class="confluenceTd" colspan="1">Nice</td>
+					<td class="confluenceTd" colspan="1">?</td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Email Communication</td>
+					<td class="confluenceTd" colspan="1">Outbound communication on loyalty &amp; ecommerce</td>
+					<td class="confluenceTd" colspan="1">Need new email marketing templates for web/mobile view across: order confirmation emails, promotional emails, post purchase emails (how was your order), weekly j4U exclusive deals, abandoned cart, introducing delivery, j4u sign up confirmation.</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">
+						<div class="content-wrapper">
+							<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-20%20at%208.23.08%20AM.png?version=1&amp;modificationDate=1509569890995&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-20 at 8.23.08 AM.png" data-linked-resource-id="5964115" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="4da47053-fcac-4406-831f-55d165f0955e" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-20%20at%208.23.08%20AM.png?version=1&amp;modificationDate=1509569890995&amp;cacheVersion=1&amp;api=v2&amp;width=282&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-20%20at%208.23.08%20AM.png?version=1&amp;modificationDate=1509569890995&amp;cacheVersion=1&amp;api=v2&amp;width=564&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-20%20at%208.23.08%20AM.png?version=1&amp;modificationDate=1509569890995&amp;cacheVersion=1&amp;api=v2&amp;width=282&amp;height=250 1x"></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-20%20at%208.24.06%20AM.png?version=1&amp;modificationDate=1509569891245&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-20 at 8.24.06 AM.png" data-linked-resource-id="5964119" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="8d207f78-c14b-40f5-a89c-74f5de245f7b" data-media-type="file" data-unresolved-comment-count="0" height="250" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-20%20at%208.24.06%20AM.png?version=1&amp;modificationDate=1509569891245&amp;cacheVersion=1&amp;api=v2&amp;width=246&amp;height=250" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-20%20at%208.24.06%20AM.png?version=1&amp;modificationDate=1509569891245&amp;cacheVersion=1&amp;api=v2&amp;width=492&amp;height=500 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-20%20at%208.24.06%20AM.png?version=1&amp;modificationDate=1509569891245&amp;cacheVersion=1&amp;api=v2&amp;width=246&amp;height=250 1x"></span></p>
+						</div>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Redesign</td>
+					<td class="confluenceTd" colspan="1">Must</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<p class="auto-cursor-target"><strong>Move to Non-functional Requirements</strong></p>
+	<h3 class="auto-cursor-target" id="R1Requirements(updated)-ExcludedR1Requirements(subsequentreleases)">Excluded R1 Requirements (subsequent releases)</h3>
+	<p><br></p>
+	<div class="table-wrap">
+		<table class="relative-table wrapped confluenceTable tablesorter tablesorter-default" role="grid" style="width: 64.4375%;">
+			<colgroup>
+				<col style="width: 14.3689%;">
+				<col style="width: 15.6311%;">
+				<col style="width: 15.1456%;">
+				<col style="width: 6.21359%;">
+				<col style="width: 12.8155%;">
+				<col style="width: 30.1942%;">
+				<col style="width: 2.81553%;">
+				<col style="width: 2.81553%;">
+				<col>
+			</colgroup>
+			<thead>
+				<tr class="tablesorter-headerRow" role="row">
+					<th aria-disabled="false" aria-label="Features: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="0" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							<p><strong>Features</strong></p>
+							<p><br></p>
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Description: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="1" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							Description
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="User Stories: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="2" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							User Stories
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label=": No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-column="3" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							<br>
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Comments: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="4" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							Comments
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Legacy UI (if applicable)&nbsp;: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-column="5" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							Legacy UI (if applicable)&nbsp;
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Complete re-design or re-skin: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-column="6" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							Complete re-design or re-skin
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Priority (Must v. Nice): No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-column="7" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							Priority (Must v. Nice)
+						</div>
+					</th>
+					<th aria-disabled="false" aria-label="Key Technology: No sort applied, activate to apply an ascending sort" aria-sort="none" class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" colspan="1" data-column="8" role="columnheader" scope="col" style="user-select: none;" tabindex="0">
+						<div class="tablesorter-header-inner">
+							Key Technology
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody aria-live="polite" aria-relevant="all">
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Don't Forget Reminders</td>
+					<td class="confluenceTd" colspan="1">Reminder experience for those "commonly forgotten" items.&nbsp;</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">Way finding</td>
+					<td class="confluenceTd"><br></td>
+					<td class="confluenceTd"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">B2B Ordering</td>
+					<td class="confluenceTd" colspan="1">Business ordering/catering</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Online Ordering (Deli &amp; Bakery)</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Replace mywebgrocer for catering/order ahead experience</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-thumbnail" data-base-url="https://teampolaris.atlassian.net/wiki" data-image-src="https://teampolaris.atlassian.net/wiki/download/attachments/5996545/Screen%20Shot%202017-10-16%20at%208.04.36%20PM.png?version=1&amp;modificationDate=1509569891525&amp;cacheVersion=1&amp;api=v2" data-linked-resource-container-id="5996545" data-linked-resource-container-version="6" data-linked-resource-content-type="image/png" data-linked-resource-default-alias="Screen Shot 2017-10-16 at 8.04.36 PM.png" data-linked-resource-id="5964123" data-linked-resource-type="attachment" data-linked-resource-version="1" data-media-id="2129c475-0ae9-4860-8be6-becc080825d6" data-media-type="file" data-unresolved-comment-count="0" height="150" src="https://teampolaris.atlassian.net/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.04.36%20PM.png?version=1&amp;modificationDate=1509569891525&amp;cacheVersion=1&amp;api=v2&amp;width=285&amp;height=150" srcset="/wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.04.36%20PM.png?version=1&amp;modificationDate=1509569891525&amp;cacheVersion=1&amp;api=v2&amp;width=570&amp;height=300 2x, /wiki/download/thumbnails/5996545/Screen%20Shot%202017-10-16%20at%208.04.36%20PM.png?version=1&amp;modificationDate=1509569891525&amp;cacheVersion=1&amp;api=v2&amp;width=285&amp;height=150 1x"></span></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Blog</td>
+					<td class="confluenceTd" colspan="1">Content Re updates etc.</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">CPG sponsored / paid modules</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Desktop notifications</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Contact Customer Service</td>
+					<td class="confluenceTd" colspan="1">Make it easy to contact the CS team however customers want.</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Submit form</li>
+							<li>Chat</li>
+							<li>Email</li>
+							<li>Phone</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Pharmacy Ordering</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Refills</li>
+							<li>Transfers</li>
+							<li>Account Management</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Recommendations</td>
+					<td class="confluenceTd" colspan="1">You May Also Like</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>You may also like</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">Potentially add to r1&nbsp;</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Bakery Ordering</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">In App &amp; Desktop feedback</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Ratings &amp; Reviews</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Refer a Friend (loyalty &amp; delivery)</td>
+					<td class="confluenceTd" colspan="1">Loyalty perk using refer-a-friend functionality&nbsp;</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Earn loyalty credits/etc towards loyalty &amp; delivery friends you've digtially referred.</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Payment Wallet</td>
+					<td class="confluenceTd" colspan="1">Support Apple &amp; Google Pay</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Product Image Ribbon ads</td>
+					<td class="confluenceTd" colspan="1">Ribbon ads (image overlays) for catalog entry thumbnails</td>
+					<td class="confluenceTd" colspan="1">
+						<p>Sponsored</p>
+						<p>Hightlight (LTO, New, Almost sold out, etc)</p>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Personalization</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Content by user segment (ie new user, geo lcoation, loyalist, etc).</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Marketplace</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Non ABS inventory</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Dynamic Pricing</td>
+					<td class="confluenceTd" colspan="1">Smarter pricing beyond avg 10% markup.</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Dynamic&nbsp;</li>
+							<li>Price elasticity</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd">E-Receipts display</td>
+					<td class="confluenceTd">Not sure what this is</td>
+					<td class="confluenceTd"><br></td>
+					<td class="confluenceTd">Do we have this today?</td>
+					<td class="confluenceTd"><br></td>
+					<td class="confluenceTd"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Catalogue</td>
+					<td class="confluenceTd" colspan="1">Smarter catalogue &amp; inventory associated. Move away from perpetual inventory (ie we don't have it all).&nbsp;</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Add merchant control</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Inventory Availability</td>
+					<td class="confluenceTd" colspan="1">Dynamic / Realtime inventory &amp; assocaited availability count within PDP UI</td>
+					<td class="confluenceTd" colspan="1">
+						<ul>
+							<li>Only 1 left</li>
+						</ul>
+					</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+				<tr role="row">
+					<td class="confluenceTd" colspan="1">Partial Shipments</td>
+					<td class="confluenceTd" colspan="1">Ship as complete or partial shipments</td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+					<td class="confluenceTd" colspan="1"><br></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<p><br></p>
+	<p><br>
+	<br>
+	<br></p>
+	<div class="no-print" id="likes-and-labels-container">
+		<div id="likes-section">
+			<div>
+				<a class="like-button" href=""><span class="aui-icon aui-icon-small aui-iconfont-like"></span><span class="like-button-text">Like</span></a><span class="like-summary"></span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
